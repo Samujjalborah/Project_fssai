@@ -1,0 +1,74 @@
+/* Custom CSS Styles for Oyster Mushroom Nutrition Site */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --color-cream: #FAF7F2;
+  --color-sand: #F2ECE1;
+  --color-forest: #1E3F2D;
+  --color-forest-dark: #142B1F;
+  --color-sage: #507A5E;
+  --color-sage-light: #E7EFE9;
+  --color-slate: #374151;
+  --color-terracotta: #C26743;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-cream);
+  color: var(--color-slate);
+}
+
+.font-serif-display {
+  font-family: 'Fraunces', Georgia, serif;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF7F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Glassmorphism Navigation */
+.glass-nav {
+  background: rgba(250, 247, 242, 0.90);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Card hover lift effect */
+.card-hover {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px -8px rgba(30, 63, 45, 0.1);
+}
+
+/* Interactive tab styling */
+.tab-btn.active {
+  background-color: #1E3F2D;
+  color: #FFFFFF;
+  border-color: #1E3F2D;
+}
+
+/* Table alternating row style */
+.table-row-hover:hover {
+  background-color: #F5EFE6;
+}
+
+/* Soft badge */
+.badge-forest {
+  background-color: #E8F0EA;
+  color: #1E3F2D;
+  border: 1px solid rgba(30, 63, 45, 0.15);
+}

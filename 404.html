@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Oyster Mushroom Guide</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: { 50: '#FDFBF7', 100: '#FAF7F2', 200: '#F4EFE6' },
+            forest: { 600: '#2D5A43', 800: '#1E3F2D', 900: '#142B1F' },
+            sage: { 600: '#507A5E' }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-cream-100 text-slate-700 min-h-screen flex flex-col justify-between antialiased">
+  
+  <header class="p-6">
+    <a href="/" class="flex items-center gap-3 w-fit mx-auto sm:mx-0">
+      <div class="w-9 h-9 rounded-xl bg-forest-800 flex items-center justify-center text-cream-100">
+        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.42 3.12 7.24.4.38.93.59 1.48.59h1.9c.83 0 1.5-.67 1.5-1.5V13.5c0-.83.67-1.5 1.5-1.5h1c.83 0 1.5.67 1.5 1.5v4.83c0 .83.67 1.5 1.5 1.5h1.9c.55 0 1.08-.21 1.48-.59C20.8 17.42 22 14.85 22 12c0-5.52-4.48-10-10-10zm-1 12h-1v-2h1v2zm3 0h-1v-2h1v2z"/>
+        </svg>
+      </div>
+      <span class="font-serif font-bold text-forest-900 text-base">Oyster Mushrooms</span>
+    </a>
+  </header>
+
+  <main class="max-w-lg mx-auto text-center px-4 py-16">
+    <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-forest-100 text-forest-800 mb-6 border border-forest-200 shadow-sm">
+      <span class="font-serif text-3xl font-black">404</span>
+    </div>
+    <h1 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mb-3">
+      Page Not Found
+    </h1>
+    <p class="text-slate-600 text-sm sm:text-base mb-8">
+      The mushroom cluster you were foraging for couldn't be located. Let's guide you back to our comprehensive nutritional profile.
+    </p>
+    <a href="/" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-forest-800 hover:bg-forest-700 text-cream-50 text-sm font-semibold transition-all shadow-sm">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+      </svg>
+      <span>Return to Homepage</span>
+    </a>
+  </main>
+
+  <footer class="py-6 text-center text-xs text-slate-500">
+    &copy; 2026 Oyster Mushroom Nutrition Guide. All rights reserved.
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oyster Mushrooms (Pleurotus ostreatus) — Complete Nutrition & Health Guide</title>
+  <meta name="description" content="Explore the clean nutrition, micronutrient density, and scientifically proven health benefits of Oyster Mushrooms (Pleurotus ostreatus). Standard USDA data & culinary prep guide.">
+  
+  <!-- Tailwind CSS via CDN with customized earthy theme configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FDFBF7',
+              100: '#FAF7F2',
+              200: '#F4EFE6',
+              300: '#ECE3D4',
+              400: '#DED1BD'
+            },
+            forest: {
+              50: '#F0F5F2',
+              100: '#E1EBE4',
+              200: '#C2D7C9',
+              600: '#2D5A43',
+              700: '#234936',
+              800: '#1E3F2D',
+              900: '#142B1F'
+            },
+            sage: {
+              100: '#EEF3EF',
+              200: '#DCE6DF',
+              400: '#7E9F8A',
+              600: '#507A5E',
+              700: '#3F624B'
+            },
+            slate: {
+              600: '#4B5563',
+              700: '#374151',
+              800: '#1F2937',
+              900: '#111827'
+            },
+            terracotta: {
+              500: '#C26743',
+              600: '#AA5635'
+            }
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- External Stylesheet for custom fonts, scrollbars, and keyframes -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-cream-100 text-slate-700 antialiased selection:bg-forest-100 selection:text-forest-800 flex flex-col min-h-screen">
+
+  <!-- ========================================================================= -->
+  <!-- NAVIGATION BAR                                                            -->
+  <!-- ========================================================================= -->
+  <header id="main-header" class="sticky top-0 z-50 glass-nav transition-all duration-300 border-b border-cream-300/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand & Taxonomy -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-forest-800 flex items-center justify-center text-cream-100 shadow-sm transition-transform duration-200 group-hover:scale-105">
+          <!-- Mushroom Botanical Icon -->
+          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.42 3.12 7.24.4.38.93.59 1.48.59h1.9c.83 0 1.5-.67 1.5-1.5V13.5c0-.83.67-1.5 1.5-1.5h1c.83 0 1.5.67 1.5 1.5v4.83c0 .83.67 1.5 1.5 1.5h1.9c.55 0 1.08-.21 1.48-.59C20.8 17.42 22 14.85 22 12c0-5.52-4.48-10-10-10zm-1 12h-1v-2h1v2zm3 0h-1v-2h1v2z"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif font-bold text-lg tracking-tight text-forest-900 leading-tight">Oyster Mushroom</span>
+          <span class="text-[11px] uppercase tracking-wider text-forest-600 font-medium italic">Pleurotus ostreatus</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="#overview" class="hover:text-forest-800 transition-colors">Overview</a>
+        <a href="#quick-facts" class="hover:text-forest-800 transition-colors">Key Metrics</a>
+        <a href="#nutrition-table" class="hover:text-forest-800 transition-colors">Nutrition Table</a>
+        <a href="#health-benefits" class="hover:text-forest-800 transition-colors">Health Benefits</a>
+        <a href="#preparation" class="hover:text-forest-800 transition-colors">Prep & Storage</a>
+      </nav>
+
+      <!-- Header CTA Button -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#nutrition-table" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold uppercase tracking-wider bg-forest-800 hover:bg-forest-700 text-cream-50 rounded-lg shadow-sm transition-all duration-200 hover:shadow">
+          <span>View Facts</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-700 hover:bg-cream-200 transition-colors" aria-label="Toggle navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-cream-300/80 bg-cream-50/95 backdrop-blur-lg px-4 pt-3 pb-6 space-y-2">
+      <a href="#overview" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Overview</a>
+      <a href="#quick-facts" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Key Metrics</a>
+      <a href="#nutrition-table" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Detailed Nutrition Table</a>
+      <a href="#health-benefits" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Health Benefits</a>
+      <a href="#preparation" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Culinary Prep & Storage</a>
+      <div class="pt-2">
+        <a href="#nutrition-table" class="mobile-nav-link block w-full text-center px-4 py-2.5 rounded-lg bg-forest-800 text-cream-50 font-medium text-sm">
+          Explore USDA Nutrition Data
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- 1. HERO SECTION                                                           -->
+  <!-- ========================================================================= -->
+  <section id="overview" class="relative overflow-hidden pt-12 pb-20 md:pt-20 md:pb-28 border-b border-cream-300/60">
+    <!-- Ambient Background Accents -->
+    <div class="absolute -top-24 -right-24 w-96 h-96 bg-sage-200/50 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 -left-20 w-80 h-80 bg-cream-300/40 rounded-full blur-2xl pointer-events-none"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <!-- Category Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full badge-forest text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-forest-600 animate-ping"></span>
+            <span>Functional Superfood & Botanical Bioactive</span>
+          </div>
+
+          <!-- High-Impact Title -->
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-forest-900 tracking-tight leading-[1.15]">
+            Pure Nutrition, <br>
+            <span class="italic font-normal text-forest-700">Culinary Elegance.</span>
+          </h1>
+
+          <!-- Concise Tagline focusing on clean nutrition and culinary versatility -->
+          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Prized for their delicate velvety caps and savory umami finish, <strong class="text-forest-900 font-semibold">Oyster Mushrooms (<span class="italic font-normal">Pleurotus ostreatus</span>)</strong> deliver clean, low-calorie plant protein alongside cellular defense bioactives including beta-glucans and ergothioneine.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+            <!-- Primary CTA button leading directly to nutrition facts -->
+            <a href="#quick-facts" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold rounded-xl bg-forest-800 text-cream-50 hover:bg-forest-700 transition-all shadow-sm hover:shadow-md">
+              <span>Explore Nutrition Facts</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+
+            <!-- Secondary CTA -->
+            <a href="#health-benefits" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold rounded-xl bg-white border border-cream-300 text-slate-700 hover:bg-cream-200 transition-colors">
+              <span>Proven Health Benefits</span>
+            </a>
+          </div>
+
+          <!-- Quick trust badges -->
+          <div class="pt-6 border-t border-cream-300/80 grid grid-cols-3 gap-4 text-center max-w-md mx-auto lg:mx-0">
+            <div>
+              <div class="text-xl font-bold font-serif text-forest-900">33 kcal</div>
+              <div class="text-xs text-slate-500 font-medium">Per 100g Serving</div>
+            </div>
+            <div class="border-x border-cream-300">
+              <div class="text-xl font-bold font-serif text-forest-900">0% Chol.</div>
+              <div class="text-xs text-slate-500 font-medium">Heart Healthy</div>
+            </div>
+            <div>
+              <div class="text-xl font-bold font-serif text-forest-900">100%</div>
+              <div class="text-xs text-slate-500 font-medium">Plant-Based</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Styled image container -->
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-cream-200 aspect-[4/3] sm:aspect-square">
+              <img 
+                src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?auto=format&fit=crop&w=1000&q=80" 
+                alt="Fresh clusters of organic Oyster Mushrooms (Pleurotus ostreatus) showcasing layered gills and earthy texture"
+                class="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                loading="eager"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent"></div>
+              
+              <!-- Image floating badge -->
+              <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md rounded-2xl p-3.5 border border-white/40 shadow-lg">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                    <span class="text-xs font-bold text-forest-900 uppercase tracking-wide">Pleurotus ostreatus</span>
+                  </div>
+                  <span class="text-[11px] text-slate-500 font-mono">USDA Standard</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1 line-clamp-1">Wild & cultivated saprotrophic culinary oyster mushroom</p>
+              </div>
+            </div>
+
+            <!-- Decorative Leaf Icon Accent -->
+            <div class="absolute -bottom-5 -right-4 w-14 h-14 rounded-2xl bg-sage-600 text-white flex items-center justify-center shadow-lg border-2 border-white">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              </svg>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 2. KEY NUTRITION HIGHLIGHTS (Quick-Glance Grid per 100g)                  -->
+  <!-- ========================================================================= -->
+  <section id="quick-facts" class="py-16 md:py-24 bg-cream-50 relative border-b border-cream-300/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header with Serving Size Switcher -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-forest-700">Quick-Glance Profile</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-1">
+            Key Nutrition Highlights
+          </h2>
+          <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl">
+            Clean macro distribution with natural hydration (89% water), rich prebiotic fibers, and zero saturated cholesterol.
+          </p>
+        </div>
+
+        <!-- Dynamic Serving Size Switcher -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 bg-cream-200/80 p-1.5 rounded-2xl border border-cream-300">
+          <span class="text-xs font-semibold text-forest-900 px-2 sm:pl-3">Serving:</span>
+          <div class="flex gap-1">
+            <button class="serving-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-forest-800 text-white shadow-sm transition-all" data-grams="100">
+              100g (Standard)
+            </button>
+            <button class="serving-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-cream-100 transition-all" data-grams="86">
+              1 Cup Sliced (86g)
+            </button>
+            <button class="serving-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-cream-100 transition-all" data-grams="200">
+              200g (Meal Portion)
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Quick-Glance Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Metric 1: Calories -->
+        <div class="card-hover bg-white rounded-3xl p-6 border border-cream-300/80 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4">
+            <!-- Flame / Energy Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+            </svg>
+          </div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Energy Density</span>
+          <div class="flex items-baseline gap-1.5 mt-1">
+            <span id="highlight-calories" class="font-serif text-4xl font-extrabold text-forest-900 num-glow">33</span>
+            <span class="text-sm font-medium text-slate-500">kcal</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            Remarkably low energy density that promotes sustained fullness without caloric overload.
+          </p>
+          <div class="mt-4 pt-3 border-t border-cream-200 flex items-center justify-between text-[11px] text-slate-500">
+            <span>Daily Value</span>
+            <span class="font-semibold text-forest-800">~2% DV</span>
+          </div>
+        </div>
+
+        <!-- Metric 2: Protein -->
+        <div class="card-hover bg-white rounded-3xl p-6 border border-cream-300/80 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-forest-700 flex items-center justify-center mb-4">
+            <!-- Muscle / Protein Molecule Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+            </svg>
+          </div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Clean Protein</span>
+          <div class="flex items-baseline gap-1.5 mt-1">
+            <span id="highlight-protein" class="font-serif text-4xl font-extrabold text-forest-900 num-glow">3.3g</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            High-bioavailability plant protein supplying essential amino acids and branch chains.
+          </p>
+          <div class="mt-4 pt-3 border-t border-cream-200 flex items-center justify-between text-[11px] text-slate-500">
+            <span>Daily Value</span>
+            <span class="font-semibold text-forest-800">~7% DV</span>
+          </div>
+        </div>
+
+        <!-- Metric 3: Dietary Fiber -->
+        <div class="card-hover bg-white rounded-3xl p-6 border border-cream-300/80 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
+            <!-- Fiber / Digestive health icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+          </div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Dietary Fiber</span>
+          <div class="flex items-baseline gap-1.5 mt-1">
+            <span id="highlight-fiber" class="font-serif text-4xl font-extrabold text-forest-900 num-glow">2.3g</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            Naturally dense in beta-glucans and insoluble prebiotic fibers nourishing gut microbiome.
+          </p>
+          <div class="mt-4 pt-3 border-t border-cream-200 flex items-center justify-between text-[11px] text-slate-500">
+            <span>Daily Value</span>
+            <span class="font-semibold text-forest-800">~8% DV</span>
+          </div>
+        </div>
+
+        <!-- Metric 4: Fat -->
+        <div class="card-hover bg-white rounded-3xl p-6 border border-cream-300/80 shadow-sm relative overflow-hidden">
+          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
+            <!-- Low Lipid / Shield Icon -->
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Total Lipids</span>
+          <div class="flex items-baseline gap-1.5 mt-1">
+            <span id="highlight-fat" class="font-serif text-4xl font-extrabold text-forest-900 num-glow">0.4g</span>
+          </div>
+          <p class="text-xs text-slate-600 mt-2">
+            Virtually zero dietary fats, 0mg cholesterol, and no saturated fat burden on arteries.
+          </p>
+          <div class="mt-4 pt-3 border-t border-cream-200 flex items-center justify-between text-[11px] text-slate-500">
+            <span>Daily Value</span>
+            <span class="font-semibold text-forest-800">&lt; 1% DV</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Nutritional Indicators Ribbon -->
+      <div class="mt-8 bg-cream-200/60 rounded-2xl p-4 sm:p-5 border border-cream-300/70 flex flex-wrap items-center justify-around gap-4 text-xs font-medium text-slate-600">
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-forest-600"></span>
+          <span>Hydration Factor: <strong class="text-forest-900">89.2% Water</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-forest-600"></span>
+          <span>Net Carbohydrates: <strong class="text-forest-900">3.8g</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-forest-600"></span>
+          <span>Glycemic Index: <strong class="text-forest-900">Very Low (&lt; 15)</strong></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-forest-600"></span>
+          <span>Cholesterol: <strong class="text-forest-900">0.0 mg</strong></span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 3. DETAILED NUTRITION TABLE                                               -->
+  <!-- ========================================================================= -->
+  <section id="nutrition-table" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Table Intro & Category Filters -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-forest-700">Detailed Analytical Breakdown</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-1">
+          Nutritional Facts Table
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
+          Values calibrated to <span id="current-serving-display" class="font-semibold text-forest-900">100g</span> raw serving of <em>Pleurotus ostreatus</em>. Daily Values (% DV) based on standard 2,000-calorie adult diet guidelines.
+        </p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="flex items-center gap-1.5 bg-white p-1.5 rounded-2xl border border-cream-300 self-start md:self-auto shadow-sm">
+        <button class="table-filter-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-forest-800 text-white shadow-sm transition-all" data-filter="all">
+          All Nutrients
+        </button>
+        <button class="table-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-cream-100 transition-all" data-filter="macro">
+          Macronutrients
+        </button>
+        <button class="table-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-cream-100 transition-all" data-filter="micro">
+          Vitamins & Minerals
+        </button>
+      </div>
+    </div>
+
+    <!-- Table Card Container -->
+    <div class="bg-white rounded-3xl border border-cream-300 shadow-sm overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-cream-200/90 text-forest-900 text-xs uppercase tracking-wider border-b border-cream-300 font-serif">
+              <th class="py-4 px-4 sm:px-6 font-bold">Nutrient Profile</th>
+              <th class="py-4 px-4 text-right font-bold">Amount</th>
+              <th class="py-4 px-4 text-right font-bold">% Daily Value (DV)</th>
+              <th class="py-4 px-4 sm:px-6 font-bold hidden md:table-cell">Physiological Role & Bioactivity</th>
+            </tr>
+          </thead>
+          <tbody id="nutrition-table-body" class="divide-y divide-cream-200">
+            <!-- Dynamic Rows will be rendered by app.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table Footer Note -->
+      <div class="px-6 py-4 bg-cream-50 border-t border-cream-200/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-forest-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Values reference USDA FoodData Central (FDC ID: 168580 / Pleurotus ostreatus).
+        </span>
+        <span class="font-mono text-[11px] text-forest-700 bg-forest-50 px-2 py-0.5 rounded border border-forest-100">
+          Niacin: 31% DV • Riboflavin: 27% DV
+        </span>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 4. CORE HEALTH BENEFITS                                                   -->
+  <!-- ========================================================================= -->
+  <section id="health-benefits" class="py-16 md:py-24 bg-cream-200/60 border-y border-cream-300/80 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-forest-700">Scientific Backing</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-1">
+          Core Health Benefits
+        </h2>
+        <p class="text-slate-600 text-sm sm:text-base mt-2">
+          Beyond everyday nourishment, oyster mushrooms synthesize potent bioactive compounds that modulate immunity, protect heart tissue, and guard against cellular senescence.
+        </p>
+      </div>
+
+      <!-- 4 Minimalist Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Card 1: Immune Support (Beta-glucans) -->
+        <div class="card-hover bg-white rounded-3xl p-8 border border-cream-300/90 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-forest-50 text-forest-800 flex items-center justify-center border border-forest-100">
+                <!-- Shield with Plus / Immune Icon -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-mono uppercase tracking-wider bg-forest-100/70 text-forest-800 px-3 py-1 rounded-full font-semibold">
+                Beta-D-Glucans
+              </span>
+            </div>
+
+            <h3 class="font-serif text-2xl font-bold text-forest-900 mb-2">
+              Immune System Modulation
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Oyster mushrooms are rich in fungal <strong class="text-forest-900 font-semibold">β-(1,3/1,6)-D-glucans</strong>, naturally occurring polysaccharides that bind to dectin-1 receptors on macrophages, neutrophils, and Natural Killer (NK) cells to prime host defense mechanisms without inducing hyperinflammation.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-cream-200">
+            <div class="flex items-center gap-2 text-xs text-forest-700 font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Stimulates cytokine signaling and antibody production</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Heart & Cholesterol Health (Statins / Lovastatin) -->
+        <div class="card-hover bg-white rounded-3xl p-8 border border-cream-300/90 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-amber-50 text-terracotta-500 flex items-center justify-center border border-amber-100">
+                <!-- Heart / Cardio Icon -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-mono uppercase tracking-wider bg-amber-100/70 text-terracotta-600 px-3 py-1 rounded-full font-semibold">
+                Natural Lovastatin
+              </span>
+            </div>
+
+            <h3 class="font-serif text-2xl font-bold text-forest-900 mb-2">
+              Heart & Cholesterol Regulation
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              <em>Pleurotus ostreatus</em> is one of the few natural dietary sources containing up to 2.8% dry-weight of <strong class="text-forest-900 font-semibold">Lovastatin (mevinolin)</strong>. This compound competitively inhibits HMG-CoA reductase, the rate-limiting enzyme in hepatic cholesterol biosynthesis, aiding balanced LDL/HDL ratios.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-cream-200">
+            <div class="flex items-center gap-2 text-xs text-forest-700 font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Promotes healthy arterial elasticity and low circulating LDL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: High Antioxidant Content (Ergothioneine) -->
+        <div class="card-hover bg-white rounded-3xl p-8 border border-cream-300/90 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-800 flex items-center justify-center border border-teal-100">
+                <!-- Sparkle / Longevity Icon -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-mono uppercase tracking-wider bg-teal-100/70 text-teal-800 px-3 py-1 rounded-full font-semibold">
+                Ergothioneine
+              </span>
+            </div>
+
+            <h3 class="font-serif text-2xl font-bold text-forest-900 mb-2">
+              Cellular Longevity & Antioxidants
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              Known by gerontologists as the "longevity vitamin," <strong class="text-forest-900 font-semibold">L-Ergothioneine</strong> possesses a dedicated cellular transporter (OCTN1) in humans. It concentrates within mitochondria and erythrocytes, quenching free radicals and shielding cells against oxidative DNA damage.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-cream-200">
+            <div class="flex items-center gap-2 text-xs text-forest-700 font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Heat-stable antioxidant that protects mitochondrial membranes</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Low-Calorie Plant Protein Source -->
+        <div class="card-hover bg-white rounded-3xl p-8 border border-cream-300/90 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-forest-800 flex items-center justify-center border border-emerald-100">
+                <!-- Sprout / Clean Plant Nutrition Icon -->
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              </div>
+              <span class="text-[11px] font-mono uppercase tracking-wider bg-emerald-100/70 text-forest-800 px-3 py-1 rounded-full font-semibold">
+                Clean Protein
+              </span>
+            </div>
+
+            <h3 class="font-serif text-2xl font-bold text-forest-900 mb-2">
+              Low-Calorie Plant Protein Source
+            </h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-4">
+              With 3.3g protein per 33 calories, oyster mushrooms boast an exceptional protein-to-calorie ratio. They deliver high biological value without the inflammatory purines or cholesterol found in conventional red meats, making them a cornerstone for plant-forward metabolic health.
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-cream-200">
+            <div class="flex items-center gap-2 text-xs text-forest-700 font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              <span>Negligible glycemic response with high gastric satiety</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. SIMPLE PREPARATION & STORAGE TIPS                                      -->
+  <!-- ========================================================================= -->
+  <section id="preparation" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-forest-900 text-cream-50 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-xl">
+      
+      <!-- Subtle Decorative Background Pattern -->
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-forest-800/60 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="relative z-10">
+        
+        <!-- Section Title -->
+        <div class="max-w-2xl mb-10">
+          <span class="text-xs font-bold uppercase tracking-wider text-sage-400">Preserving Flavor & Phytonutrients</span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">
+            Preparation & Storage Tips
+          </h2>
+          <p class="text-cream-300 text-sm sm:text-base mt-2">
+            Oyster mushrooms feature delicate gills that release their best flavor and retain key nutrients when stored dry and flash-cooked over medium-high heat.
+          </p>
+        </div>
+
+        <!-- Interactive Guide Tabs -->
+        <div class="flex flex-wrap gap-2 mb-8 border-b border-forest-800 pb-4">
+          <button class="prep-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-forest-800 text-white shadow-sm border border-forest-700 transition-all" data-tab="tab-storage">
+            1. Proper Storage
+          </button>
+          <button class="prep-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/10 text-cream-200 hover:bg-white/20 transition-all" data-tab="tab-saute">
+            2. The Flash Sauté
+          </button>
+          <button class="prep-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/10 text-cream-200 hover:bg-white/20 transition-all" data-tab="tab-bioavail">
+            3. Nutrient Bioavailability
+          </button>
+        </div>
+
+        <!-- Tab 1: Storage -->
+        <div id="tab-storage" class="prep-pane space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bg-forest-800/60 p-6 rounded-2xl border border-forest-700/60">
+              <div class="w-10 h-10 rounded-xl bg-sage-600/30 text-sage-300 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                </svg>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-white mb-1">Brown Paper Bag</h4>
+              <p class="text-xs text-cream-300 leading-relaxed">
+                Store unwashed in a breathable brown paper bag. Never seal in airtight plastic, which traps moisture and accelerates slime formation.
+              </p>
+            </div>
+
+            <div class="bg-forest-800/60 p-6 rounded-2xl border border-forest-700/60">
+              <div class="w-10 h-10 rounded-xl bg-sage-600/30 text-sage-300 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-white mb-1">3–5 Days Shelf Life</h4>
+              <p class="text-xs text-cream-300 leading-relaxed">
+                Keep in the main compartment of the refrigerator at 34–38°F (1–3°C). Use within 3 to 5 days for optimal firmness and sweetness.
+              </p>
+            </div>
+
+            <div class="bg-forest-800/60 p-6 rounded-2xl border border-forest-700/60">
+              <div class="w-10 h-10 rounded-xl bg-sage-600/30 text-sage-300 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                </svg>
+              </div>
+              <h4 class="font-serif text-lg font-bold text-white mb-1">Dry Brush Cleaning</h4>
+              <p class="text-xs text-cream-300 leading-relaxed">
+                Clean right before cooking using a damp paper towel or soft culinary brush. Avoid submerging in water—their sponge-like gills absorb excess liquid.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Tab 2: Sauté -->
+        <div id="tab-saute" class="prep-pane hidden space-y-6">
+          <div class="bg-forest-800/80 p-6 sm:p-8 rounded-2xl border border-forest-700/80">
+            <h4 class="font-serif text-xl font-bold text-white mb-4 flex items-center gap-2">
+              <span>The 3-Step Nutrient-Preserving Sauté</span>
+            </h4>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-cream-200">
+              <div class="space-y-2">
+                <div class="w-7 h-7 rounded-full bg-sage-600 text-white flex items-center justify-center font-bold">1</div>
+                <h5 class="font-bold text-sm text-white">Dry Sear (2 Mins)</h5>
+                <p class="leading-relaxed">
+                  Tear clusters into bite-sized shreds. Place in a wide, dry, hot skillet over medium-high heat. Allow initial moisture to evaporate and edges to brown lightly.
+                </p>
+              </div>
+              <div class="space-y-2">
+                <div class="w-7 h-7 rounded-full bg-sage-600 text-white flex items-center justify-center font-bold">2</div>
+                <h5 class="font-bold text-sm text-white">Add Healthy Fats (2 Mins)</h5>
+                <p class="leading-relaxed">
+                  Drizzle 1 tbsp cold-pressed extra virgin olive oil or grass-fed butter. Toss in minced garlic and fresh thyme sprigs. Sauté until golden and crisped.
+                </p>
+              </div>
+              <div class="space-y-2">
+                <div class="w-7 h-7 rounded-full bg-sage-600 text-white flex items-center justify-center font-bold">3</div>
+                <h5 class="font-bold text-sm text-white">Finish Off Heat</h5>
+                <p class="leading-relaxed">
+                  Remove from direct flame before seasoning with sea salt and cracked pepper. Seasoning at the end prevents premature water release and preserves crisp texture.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Bioavailability -->
+        <div id="tab-bioavail" class="prep-pane hidden space-y-6">
+          <div class="bg-forest-800/80 p-6 sm:p-8 rounded-2xl border border-forest-700/80">
+            <h4 class="font-serif text-xl font-bold text-white mb-3">
+              Why Cooking Unlocks Nutrients
+            </h4>
+            <p class="text-xs sm:text-sm text-cream-300 leading-relaxed mb-4">
+              Fungal cell walls are composed of rigid <strong class="text-white">chitin</strong> (the same structural polymer found in crustaceans). Cooking or gentle heat breaks down the chitinous matrix, liberating intracellular <strong class="text-white">beta-glucans, ergothioneine, and bioavailable protein</strong> so your digestive tract can absorb them efficiently.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+              <div class="bg-forest-900/60 p-4 rounded-xl border border-forest-700">
+                <strong class="text-emerald-400 block mb-1">✓ Heat Stability</strong>
+                <span>Ergothioneine and beta-glucans tolerate high sauté temperatures up to 350°F (177°C) without denaturation.</span>
+              </div>
+              <div class="bg-forest-900/60 p-4 rounded-xl border border-forest-700">
+                <strong class="text-amber-400 block mb-1">⚡ Fat Soluble Synergy</strong>
+                <span>Pairing oyster mushrooms with a drizzle of healthy lipid enhances absorption of any naturally synthesized Vitamin D2.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 6. FOOTER                                                                 -->
+  <!-- ========================================================================= -->
+  <footer class="mt-auto bg-white border-t border-cream-300/80 py-12 text-slate-500 text-xs">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+      
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-cream-200">
+        <!-- Logo & Note -->
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-forest-800 flex items-center justify-center text-cream-100">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.42 3.12 7.24.4.38.93.59 1.48.59h1.9c.83 0 1.5-.67 1.5-1.5V13.5c0-.83.67-1.5 1.5-1.5h1c.83 0 1.5.67 1.5 1.5v4.83c0 .83.67 1.5 1.5 1.5h1.9c.55 0 1.08-.21 1.48-.59C20.8 17.42 22 14.85 22 12c0-5.52-4.48-10-10-10zm-1 12h-1v-2h1v2zm3 0h-1v-2h1v2z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="font-serif font-bold text-forest-900 text-sm">Oyster Mushrooms (<span class="italic font-normal">Pleurotus ostreatus</span>)</span>
+            <p class="text-[11px] text-slate-500">A clean nutrition resource & functional culinary guide.</p>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="flex items-center gap-6 text-slate-600 font-medium text-xs">
+          <a href="#overview" class="hover:text-forest-800 transition-colors">Overview</a>
+          <a href="#quick-facts" class="hover:text-forest-800 transition-colors">Highlights</a>
+          <a href="#nutrition-table" class="hover:text-forest-800 transition-colors">Nutrition Table</a>
+          <a href="#health-benefits" class="hover:text-forest-800 transition-colors">Benefits</a>
+          <a href="#preparation" class="hover:text-forest-800 transition-colors">Prep & Storage</a>
+        </div>
+      </div>
+
+      <!-- USDA Nutritional Disclaimer & Copyright -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 leading-relaxed text-center md:text-left">
+        <p class="max-w-3xl">
+          <strong class="font-semibold text-slate-700">Disclaimer:</strong> Nutritional values presented on this website are approximations based on standard reference data published by the United States Department of Agriculture (USDA FoodData Central, FDC ID: 168580). Actual values may vary slightly based on cultivation substrate, growing temperature, and culinary preparation method. This guide is intended for educational purposes and does not constitute medical advice.
+        </p>
+        <p class="shrink-0">
+          &copy; 2026 Oyster Mushroom Nutrition Guide. All rights reserved.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Back to Top Floating Button -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 w-11 h-11 rounded-2xl bg-forest-800 text-cream-100 shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-forest-700 hover:scale-105 z-40" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <!-- Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
