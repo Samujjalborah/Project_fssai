@@ -1,12 +1,11 @@
 /**
- * Oyster Mushroom (Pleurotus ostreatus) Nutrition & Wellness Web App
- * Handles dynamic serving size adjustments, nutrition table filtering,
- * cooking guides, and mobile navigation interactions.
+ * KATHFULA — Fresh Oyster Mushroom (Pleurotus ostreatus) Web App
+ * Handles dynamic nutrition calculators, table filters, preparation guides,
+ * interactive order estimation, WhatsApp/Call integrations, and scroll animations.
  */
 
 // Base nutritional data per 100g (USDA FoodData Central standard)
 const NUTRITION_DATA = [
-  // Macronutrients
   {
     id: "calories",
     name: "Calories (Energy)",
@@ -67,8 +66,6 @@ const NUTRITION_DATA = [
     dvPercent: null,
     details: "Promotes natural hydration and imparts tender culinary texture."
   },
-
-  // Micronutrients: B-Vitamins
   {
     id: "niacin",
     name: "Niacin (Vitamin B3)",
@@ -109,8 +106,6 @@ const NUTRITION_DATA = [
     dvPercent: 6,
     details: "Aids neurotransmitter synthesis and immune cytokine production."
   },
-
-  // Micronutrients: Essential Minerals
   {
     id: "potassium",
     name: "Potassium (K)",
@@ -163,17 +158,49 @@ const NUTRITION_DATA = [
   }
 ];
 
-// Current state
+// Pack sizing metadata for order estimator
+const PACK_SIZES = {
+  "200g": {
+    name: "200g Fresh Retail Punnet",
+    weight: "200g",
+    description: "Ideal for fresh family meals and daily sautés.",
+    badge: "Most Popular"
+  },
+  "500g": {
+    name: "500g Fresh Pack",
+    weight: "500g",
+    description: "Perfect for weekend family cooking, soups & pasta.",
+    badge: "Best Value"
+  },
+  "1kg": {
+    name: "1kg Culinary Crate",
+    weight: "1kg",
+    description: "Freshly harvested for culinary creators & batch cooking.",
+    badge: "Chef Choice"
+  },
+  "bulk": {
+    name: "Bulk Wholesale (5kg+)",
+    weight: "5kg+",
+    description: "Direct farm supply for restaurants, caterers & grocers.",
+    badge: "Wholesale B2B"
+  }
+};
+
+// Global state
 let currentServingGrams = 100;
 let currentFilter = "all";
+let selectedPackKey = "200g";
+let orderQuantity = 2;
 
-// DOM Elements
 document.addEventListener("DOMContentLoaded", () => {
   initServingSwitcher();
   initTableFilter();
   initPrepTabs();
   initMobileNav();
   initScrollEffects();
+  initOrderEstimator();
+  initContactForm();
+  initScrollReveal();
   renderNutritionTable();
   updateHighlightCards();
 });
@@ -188,12 +215,12 @@ function initServingSwitcher() {
   servingButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       servingButtons.forEach((b) => {
-        b.classList.remove("bg-[#1E3F2D]", "text-white", "shadow-sm");
-        b.classList.add("bg-white", "text-[#374151]", "hover:bg-[#F2ECE1]");
+        b.classList.remove("bg-forest-800", "text-white", "shadow-sm");
+        b.classList.add("bg-white", "text-slate-700", "hover:bg-cream-100");
       });
 
-      btn.classList.add("bg-[#1E3F2D]", "text-white", "shadow-sm");
-      btn.classList.remove("bg-white", "text-[#374151]", "hover:bg-[#F2ECE1]");
+      btn.classList.add("bg-forest-800", "text-white", "shadow-sm");
+      btn.classList.remove("bg-white", "text-slate-700", "hover:bg-cream-100");
 
       const grams = parseFloat(btn.getAttribute("data-grams"));
       currentServingGrams = grams;
@@ -214,22 +241,18 @@ function initServingSwitcher() {
 function updateHighlightCards() {
   const multiplier = currentServingGrams / 100;
 
-  // Calories
   const calVal = Math.round(33 * multiplier);
   const calElem = document.getElementById("highlight-calories");
   if (calElem) calElem.textContent = calVal;
 
-  // Protein
   const proteinVal = (3.3 * multiplier).toFixed(1);
   const proteinElem = document.getElementById("highlight-protein");
   if (proteinElem) proteinElem.textContent = `${proteinVal}g`;
 
-  // Fiber
   const fiberVal = (2.3 * multiplier).toFixed(1);
   const fiberElem = document.getElementById("highlight-fiber");
   if (fiberElem) fiberElem.textContent = `${fiberVal}g`;
 
-  // Fat
   const fatVal = (0.4 * multiplier).toFixed(1);
   const fatElem = document.getElementById("highlight-fat");
   if (fatElem) fatElem.textContent = `${fatVal}g`;
@@ -244,12 +267,12 @@ function initTableFilter() {
   filterButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       filterButtons.forEach((b) => {
-        b.classList.remove("bg-[#1E3F2D]", "text-white", "shadow-sm");
-        b.classList.add("bg-white", "text-[#374151]", "hover:bg-[#F2ECE1]");
+        b.classList.remove("bg-forest-800", "text-white", "shadow-sm");
+        b.classList.add("bg-white", "text-slate-700", "hover:bg-cream-100");
       });
 
-      btn.classList.add("bg-[#1E3F2D]", "text-white", "shadow-sm");
-      btn.classList.remove("bg-white", "text-[#374151]", "hover:bg-[#F2ECE1]");
+      btn.classList.add("bg-forest-800", "text-white", "shadow-sm");
+      btn.classList.remove("bg-white", "text-slate-700", "hover:bg-cream-100");
 
       currentFilter = btn.getAttribute("data-filter");
       renderNutritionTable();
@@ -272,8 +295,7 @@ function renderNutritionTable() {
 
   tableBody.innerHTML = filtered
     .map((item) => {
-      const scaledAmount = (item.amountPer100g * multiplier);
-      // Format number display
+      const scaledAmount = item.amountPer100g * multiplier;
       let displayAmount;
       if (item.unit === "kcal") {
         displayAmount = Math.round(scaledAmount);
@@ -285,7 +307,6 @@ function renderNutritionTable() {
         displayAmount = scaledAmount.toFixed(1);
       }
 
-      // Calculate % DV
       let dvText = "—";
       let dvProgress = 0;
       if (item.dvBase) {
@@ -299,27 +320,27 @@ function renderNutritionTable() {
       const tagBg = isMacro ? "bg-emerald-50 text-emerald-800 border-emerald-200" : "bg-amber-50 text-amber-800 border-amber-200";
 
       return `
-        <tr class="table-row-hover transition-colors border-b border-[#EAE3D6] text-sm">
-          <td class="py-3.5 px-4 font-medium text-[#1E3F2D] flex items-center gap-2">
+        <tr class="table-row-hover transition-colors border-b border-cream-200 text-sm">
+          <td class="py-3.5 px-4 font-medium text-forest-900 flex items-center gap-2">
             <span>${item.name}</span>
             <span class="text-[10px] px-2 py-0.5 rounded-full border ${tagBg} font-mono tracking-wider">${tagLabel}</span>
           </td>
-          <td class="py-3.5 px-4 text-right font-semibold text-[#27303E]">
-            ${displayAmount} <span class="text-xs font-normal text-[#6B7280]">${item.unit}</span>
+          <td class="py-3.5 px-4 text-right font-semibold text-slate-800">
+            ${displayAmount} <span class="text-xs font-normal text-slate-500">${item.unit}</span>
           </td>
           <td class="py-3.5 px-4 text-right">
             ${
               item.dvBase
                 ? `<div class="inline-flex items-center justify-end gap-2">
-                    <div class="w-12 bg-[#E2DACB] h-1.5 rounded-full overflow-hidden hidden sm:block">
-                      <div class="bg-[#2D5A43] h-full rounded-full" style="width: ${dvProgress}%"></div>
+                    <div class="w-12 bg-cream-300 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                      <div class="bg-forest-600 h-full rounded-full" style="width: ${dvProgress}%"></div>
                     </div>
-                    <span class="font-semibold text-[#1E3F2D] min-w-[34px]">${dvText}</span>
+                    <span class="font-semibold text-forest-800 min-w-[34px]">${dvText}</span>
                   </div>`
-                : `<span class="text-[#9CA3AF] text-xs">N/A</span>`
+                : `<span class="text-slate-400 text-xs">N/A</span>`
             }
           </td>
-          <td class="py-3.5 px-4 text-[#4B5563] text-xs hidden md:table-cell">
+          <td class="py-3.5 px-4 text-slate-600 text-xs hidden md:table-cell">
             ${item.details}
           </td>
         </tr>
@@ -340,12 +361,12 @@ function initPrepTabs() {
       const targetId = btn.getAttribute("data-tab");
 
       tabBtns.forEach((b) => {
-        b.classList.remove("bg-[#1E3F2D]", "text-white", "shadow-sm");
-        b.classList.add("bg-white", "text-[#374151]", "hover:bg-[#F2ECE1]");
+        b.classList.remove("bg-forest-800", "text-white", "shadow-sm");
+        b.classList.add("bg-white/10", "text-cream-200", "hover:bg-white/20");
       });
 
-      btn.classList.add("bg-[#1E3F2D]", "text-white", "shadow-sm");
-      btn.classList.remove("bg-white", "text-[#374151]", "hover:bg-[#F2ECE1]");
+      btn.classList.add("bg-forest-800", "text-white", "shadow-sm");
+      btn.classList.remove("bg-white/10", "text-cream-200", "hover:bg-white/20");
 
       tabPanes.forEach((pane) => {
         if (pane.id === targetId) {
@@ -380,20 +401,176 @@ function initMobileNav() {
 }
 
 /**
- * Scroll effects (Header shadow & Back to Top)
+ * Order Estimator & Direct WhatsApp / Call Dispatch
+ */
+function initOrderEstimator() {
+  const packCards = document.querySelectorAll(".pack-card");
+  const qtyDisplay = document.getElementById("order-qty-display");
+  const btnPlus = document.getElementById("order-qty-plus");
+  const btnMinus = document.getElementById("order-qty-minus");
+  const orderSummaryText = document.getElementById("order-summary-pack");
+  const waOrderBtn = document.getElementById("wa-order-btn");
+  const mailOrderBtn = document.getElementById("mail-order-btn");
+  const customerAddressInput = document.getElementById("order-customer-address");
+
+  function updateOrderDisplay() {
+    const pack = PACK_SIZES[selectedPackKey] || PACK_SIZES["200g"];
+    if (qtyDisplay) qtyDisplay.textContent = orderQuantity;
+    if (orderSummaryText) {
+      orderSummaryText.textContent = `${orderQuantity} × ${pack.name}`;
+    }
+
+    // Build WhatsApp message
+    const userNote = customerAddressInput ? customerAddressInput.value.trim() : "";
+    let waMessage = `Hello KATHFULA Team! I would like to order Fresh Oyster Mushrooms:\n\n• Pack Size: ${pack.name}\n• Quantity: ${orderQuantity} pack(s)`;
+    if (userNote) {
+      waMessage += `\n• Delivery / Inquiry Notes: ${userNote}`;
+    }
+    waMessage += `\n\nPlease confirm availability and delivery timeframe. Thank you!`;
+
+    const encodedWa = encodeURIComponent(waMessage);
+    if (waOrderBtn) {
+      waOrderBtn.href = `https://wa.me/919126431273?text=${encodedWa}`;
+    }
+
+    // Build Email mailto link
+    const emailSubject = encodeURIComponent(`Order Inquiry: ${orderQuantity}x ${pack.name}`);
+    const emailBody = encodeURIComponent(waMessage);
+    if (mailOrderBtn) {
+      mailOrderBtn.href = `mailto:smjjlborah@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+    }
+  }
+
+  packCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      packCards.forEach((c) => {
+        c.classList.remove("selected", "border-forest-800", "bg-emerald-50/50");
+        c.classList.add("border-cream-300", "bg-white");
+      });
+
+      card.classList.add("selected", "border-forest-800", "bg-emerald-50/50");
+      card.classList.remove("border-cream-300", "bg-white");
+
+      selectedPackKey = card.getAttribute("data-pack") || "200g";
+      updateOrderDisplay();
+    });
+  });
+
+  if (btnPlus) {
+    btnPlus.addEventListener("click", () => {
+      orderQuantity = Math.min(orderQuantity + 1, 50);
+      updateOrderDisplay();
+    });
+  }
+
+  if (btnMinus) {
+    btnMinus.addEventListener("click", () => {
+      orderQuantity = Math.max(orderQuantity - 1, 1);
+      updateOrderDisplay();
+    });
+  }
+
+  if (customerAddressInput) {
+    customerAddressInput.addEventListener("input", updateOrderDisplay);
+  }
+
+  updateOrderDisplay();
+}
+
+/**
+ * Contact Inquiry Form & Toast Notifications
+ */
+function initContactForm() {
+  const form = document.getElementById("kathfula-contact-form");
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const name = (document.getElementById("contact-name")?.value || "").trim();
+    const phone = (document.getElementById("contact-phone")?.value || "").trim();
+    const message = (document.getElementById("contact-message")?.value || "").trim();
+
+    if (!name || !phone) {
+      showToast("Please enter your name and contact phone number.", "error");
+      return;
+    }
+
+    // Compose instant WhatsApp dispatch
+    const text = encodeURIComponent(
+      `Hi Kathfula!\nName: ${name}\nPhone: ${phone}\nMessage: ${message || "I would like to inquire about fresh oyster mushrooms."}`
+    );
+    const waUrl = `https://wa.me/919126431273?text=${text}`;
+
+    showToast("Opening WhatsApp with your inquiry details...", "success");
+    setTimeout(() => {
+      window.open(waUrl, "_blank");
+      form.reset();
+    }, 800);
+  });
+}
+
+/**
+ * Toast Notification Helper
+ */
+function showToast(message, type = "success") {
+  const toast = document.getElementById("toast-notification");
+  const toastMsg = document.getElementById("toast-message");
+  if (!toast || !toastMsg) return;
+
+  toastMsg.textContent = message;
+
+  toast.classList.remove("translate-y-20", "opacity-0", "pointer-events-none");
+  toast.classList.add("translate-y-0", "opacity-100");
+
+  setTimeout(() => {
+    toast.classList.add("translate-y-20", "opacity-0", "pointer-events-none");
+    toast.classList.remove("translate-y-0", "opacity-100");
+  }, 4000);
+}
+
+/**
+ * Scroll Reveal Animations using Intersection Observer
+ */
+function initScrollReveal() {
+  const elements = document.querySelectorAll(".reveal-on-scroll");
+  if (!elements.length) return;
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+  } else {
+    elements.forEach((el) => el.classList.add("revealed"));
+  }
+}
+
+/**
+ * Scroll Effects (Header shadow, Mobile bar & Back to Top)
  */
 function initScrollEffects() {
   const backToTopBtn = document.getElementById("back-to-top");
   const header = document.getElementById("main-header");
+  const mobileBar = document.getElementById("mobile-action-bar");
 
   window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
     if (header) {
       if (scrollY > 20) {
-        header.classList.add("shadow-sm", "border-b", "border-[#E4DCCE]");
+        header.classList.add("shadow-sm", "border-b", "border-cream-300");
       } else {
-        header.classList.remove("shadow-sm", "border-b", "border-[#E4DCCE]");
+        header.classList.remove("shadow-sm", "border-b", "border-cream-300");
       }
     }
 
@@ -404,6 +581,16 @@ function initScrollEffects() {
       } else {
         backToTopBtn.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
         backToTopBtn.classList.remove("opacity-100", "translate-y-0");
+      }
+    }
+
+    if (mobileBar) {
+      if (scrollY > 250) {
+        mobileBar.classList.remove("translate-y-full");
+        mobileBar.classList.add("translate-y-0");
+      } else {
+        mobileBar.classList.add("translate-y-full");
+        mobileBar.classList.remove("translate-y-0");
       }
     }
   });

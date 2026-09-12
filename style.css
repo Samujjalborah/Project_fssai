@@ -1,4 +1,4 @@
-/* Custom CSS Styles for Oyster Mushroom Nutrition Site */
+/* Custom CSS Styles for KATHFULA Oyster Mushroom Site */
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root {
@@ -40,33 +40,73 @@ html {
 
 /* Glassmorphism Navigation */
 .glass-nav {
-  background: rgba(250, 247, 242, 0.90);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 /* Card hover lift effect */
 .card-hover {
-  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 28px -8px rgba(30, 63, 45, 0.1);
+  box-shadow: 0 16px 32px -8px rgba(30, 63, 45, 0.12);
 }
 
-/* Interactive tab styling */
-.tab-btn.active {
-  background-color: #1E3F2D;
-  color: #FFFFFF;
+/* Dynamic Scroll Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-on-scroll.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pulse animation for live indicators */
+@keyframes soft-pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.85; }
+}
+.animate-soft-pulse {
+  animation: soft-pulse 3s ease-in-out infinite;
+}
+
+/* Subtle float animation */
+@keyframes float-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+.animate-float {
+  animation: float-subtle 4s ease-in-out infinite;
+}
+
+/* Interactive pack selector card active style */
+.pack-card.selected {
   border-color: #1E3F2D;
+  background-color: #F3F8F5;
+  box-shadow: 0 0 0 2px #1E3F2D;
 }
 
-/* Table alternating row style */
-.table-row-hover:hover {
-  background-color: #F5EFE6;
+/* Toast Notification styling */
+#toast-notification {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
 }
 
-/* Soft badge */
+/* Floating WhatsApp button shadow & hover */
+.wa-float-btn {
+  box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.45);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.wa-float-btn:hover {
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(37, 211, 102, 0.55);
+}
+
+/* Badge forest styling */
 .badge-forest {
   background-color: #E8F0EA;
   color: #1E3F2D;
