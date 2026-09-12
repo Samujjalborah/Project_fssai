@@ -202,7 +202,7 @@ const PACK_SIZES = {
 let currentServingGrams = 100;
 let currentFilter = "all";
 let selectedPackKey = "200g";
-let orderQuantity = 2;
+let orderQuantity = 1;
 
 function getCustomerNote() {
   const input = document.getElementById("order-customer-address");

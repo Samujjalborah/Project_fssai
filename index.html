@@ -919,7 +919,7 @@
               <p class="text-xs text-slate-500">How many packs would you like?</p>
             </div>
 
-            <div class="flex items-center gap-2 bg-cream-100 p-1.5 rounded-2xl border border-cream-300">
+            <div class="flex items-center gap-3 bg-cream-100 p-1.5 rounded-2xl border border-cream-300">
               <button 
                 type="button" 
                 id="order-qty-minus" 
@@ -929,16 +929,7 @@
               >
                 −
               </button>
-              <input 
-                type="number" 
-                id="order-qty-input" 
-                min="1" 
-                max="50" 
-                value="2" 
-                oninput="onQuantityInput(this.value)" 
-                class="w-14 text-center font-serif text-lg font-bold text-forest-900 bg-white rounded-lg py-1 border border-cream-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-forest-800 select-none"
-              />
-              <span id="order-qty-display" class="hidden">2</span>
+              <span id="order-qty-display" class="font-serif text-xl font-bold text-forest-900 min-w-[36px] text-center select-none">1</span>
               <button 
                 type="button" 
                 id="order-qty-plus" 
@@ -1012,7 +1003,7 @@
                 "bulk": { name: "Bulk Wholesale (5kg+)", unitPrice: 0, priceDisplay: "Wholesale Quote", isLocked: true }
               };
               window.selectedPackKey = "200g";
-              window.orderQuantity = 2;
+              window.orderQuantity = 1;
 
               window.selectPack = function(packKey) {
                 if (!window.PACK_SIZES[packKey]) return;
@@ -1059,31 +1050,17 @@
               window.changeQuantity = function(delta) {
                 var current = parseInt(window.orderQuantity, 10) || 1;
                 window.orderQuantity = Math.max(1, Math.min(50, current + delta));
-                var input = document.getElementById("order-qty-input");
-                if (input) input.value = window.orderQuantity;
                 var display = document.getElementById("order-qty-display");
                 if (display) display.textContent = String(window.orderQuantity);
                 window.updateOrderDisplay();
               };
 
-              window.onQuantityInput = function(val) {
-                var num = parseInt(val, 10);
-                if (!isNaN(num) && num >= 1 && num <= 50) {
-                  window.orderQuantity = num;
-                  var display = document.getElementById("order-qty-display");
-                  if (display) display.textContent = String(num);
-                  window.updateOrderDisplay();
-                }
-              };
-
               window.updateOrderDisplay = function() {
                 var pack = window.PACK_SIZES[window.selectedPackKey] || window.PACK_SIZES["200g"];
-                var qty = window.orderQuantity || 2;
+                var qty = window.orderQuantity || 1;
                 
                 var display = document.getElementById("order-qty-display");
                 if (display) display.textContent = String(qty);
-                var input = document.getElementById("order-qty-input");
-                if (input && document.activeElement !== input) input.value = String(qty);
 
                 var summary = document.getElementById("order-summary-pack");
                 if (summary) summary.textContent = qty + " × " + pack.name;
