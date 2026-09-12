@@ -1,7 +1,7 @@
 /**
  * KATHFULA — Fresh Oyster Mushroom (Pleurotus ostreatus) Web App
- * Handles dynamic nutrition calculators, table filters, preparation guides,
- * interactive order estimation, WhatsApp/Call integrations, and scroll animations.
+ * Features exact pricing (200g: ₹59, 500g: ₹149, 1kg: ₹299, Bulk: Pre-Order 50% Advance),
+ * dynamic WhatsApp integration, nutrition calculators, table filters, and animations.
  */
 
 // Base nutritional data per 100g (USDA FoodData Central standard)
@@ -158,35 +158,47 @@ const NUTRITION_DATA = [
   }
 ];
 
-// Pack sizing metadata for order estimator
+// Exact Pack Sizing and Pricing Structure
 const PACK_SIZES = {
   "200g": {
     name: "200g Fresh Retail Punnet",
     weight: "200g",
-    description: "Ideal for fresh family meals and daily sautés.",
-    badge: "Most Popular"
+    unitPrice: 59,
+    priceDisplay: "₹59",
+    description: "Standard retail punnet for 2–3 servings. Daily fresh harvest.",
+    badge: "Most Popular",
+    isLocked: false
   },
   "500g": {
     name: "500g Fresh Pack",
     weight: "500g",
-    description: "Perfect for weekend family cooking, soups & pasta.",
-    badge: "Best Value"
+    unitPrice: 149,
+    priceDisplay: "₹149",
+    description: "Ideal for family meal prep, stir-fries, noodle bowls & curries.",
+    badge: "Best Value",
+    isLocked: false
   },
   "1kg": {
     name: "1kg Culinary Crate",
     weight: "1kg",
-    description: "Freshly harvested for culinary creators & batch cooking.",
-    badge: "Chef Choice"
+    unitPrice: 299,
+    priceDisplay: "₹299",
+    description: "Freshly harvested batch for culinary creators & hearty feasts.",
+    badge: "Chef Choice",
+    isLocked: false
   },
   "bulk": {
     name: "Bulk Wholesale (5kg+)",
     weight: "5kg+",
-    description: "Direct farm supply for restaurants, caterers & grocers.",
-    badge: "Wholesale B2B"
+    unitPrice: null,
+    priceDisplay: "Wholesale Quote",
+    description: "🔒 Purely Pre-Order Only • 50% Advance Payment Required. Harvest scheduled upon advance receipt.",
+    badge: "🔒 Pre-Order Only (50% Advance)",
+    isLocked: true
   }
 };
 
-// Global state
+// Global State
 let currentServingGrams = 100;
 let currentFilter = "all";
 let selectedPackKey = "200g";
@@ -401,7 +413,7 @@ function initMobileNav() {
 }
 
 /**
- * Order Estimator & Direct WhatsApp / Call Dispatch
+ * Order Estimator with Exact Pricing & Rock-Solid WhatsApp Integration
  */
 function initOrderEstimator() {
   const packCards = document.querySelectorAll(".pack-card");
@@ -409,49 +421,122 @@ function initOrderEstimator() {
   const btnPlus = document.getElementById("order-qty-plus");
   const btnMinus = document.getElementById("order-qty-minus");
   const orderSummaryText = document.getElementById("order-summary-pack");
+  const orderTotalText = document.getElementById("order-summary-total");
   const waOrderBtn = document.getElementById("wa-order-btn");
   const mailOrderBtn = document.getElementById("mail-order-btn");
   const customerAddressInput = document.getElementById("order-customer-address");
 
+  function getWhatsAppURL() {
+    const pack = PACK_SIZES[selectedPackKey] || PACK_SIZES["200g"];
+    const userNote = customerAddressInput ? customerAddressInput.value.trim() : "";
+    let waMessage = "";
+
+    if (pack.isLocked) {
+      // Bulk Wholesale Pre-Order Message
+      waMessage = `Hello KATHFULA Team! I would like to place a B2B Bulk Wholesale Pre-Order:\n\n• Order Item: ${pack.name}\n• Quantity: ${orderQuantity} order unit(s) (5kg+ min)\n• Terms: Understand that this is Purely Pre-Order with 50% Advance Payment required.`;
+      if (userNote) {
+        waMessage += `\n• Business / Delivery Notes: ${userNote}`;
+      }
+      waMessage += `\n\nPlease provide invoice details, 50% advance bank/UPI info, and harvest schedule. Thank you!`;
+    } else {
+      // Retail Orders with Exact Calculated Totals
+      const totalAmount = orderQuantity * pack.unitPrice;
+      waMessage = `Hello KATHFULA Team! I would like to order Fresh Oyster Mushrooms:\n\n• Pack Size: ${pack.name} (@ ${pack.priceDisplay}/pack)\n• Quantity: ${orderQuantity} pack(s)\n• Estimated Total: ₹${totalAmount}`;
+      if (userNote) {
+        waMessage += `\n• Delivery / Address Notes: ${userNote}`;
+      }
+      waMessage += `\n\nPlease confirm fresh harvest availability and delivery. Thank you!`;
+    }
+
+    const encoded = encodeURIComponent(waMessage);
+    // Universal WhatsApp Web / App endpoint
+    return `https://api.whatsapp.com/send?phone=919126431273&text=${encoded}`;
+  }
+
   function updateOrderDisplay() {
     const pack = PACK_SIZES[selectedPackKey] || PACK_SIZES["200g"];
     if (qtyDisplay) qtyDisplay.textContent = orderQuantity;
+
     if (orderSummaryText) {
       orderSummaryText.textContent = `${orderQuantity} × ${pack.name}`;
     }
 
-    // Build WhatsApp message
-    const userNote = customerAddressInput ? customerAddressInput.value.trim() : "";
-    let waMessage = `Hello KATHFULA Team! I would like to order Fresh Oyster Mushrooms:\n\n• Pack Size: ${pack.name}\n• Quantity: ${orderQuantity} pack(s)`;
-    if (userNote) {
-      waMessage += `\n• Delivery / Inquiry Notes: ${userNote}`;
+    if (orderTotalText) {
+      if (pack.isLocked) {
+        orderTotalText.innerHTML = `<span class="text-rose-700 font-bold">50% Advance Required • Wholesale Pricing</span>`;
+      } else {
+        const total = orderQuantity * pack.unitPrice;
+        orderTotalText.innerHTML = `Total: <strong class="text-forest-900 font-extrabold text-lg">₹${total}</strong> <span class="text-xs text-slate-500 font-normal">(${orderQuantity} × ${pack.priceDisplay})</span>`;
+      }
     }
-    waMessage += `\n\nPlease confirm availability and delivery timeframe. Thank you!`;
 
-    const encodedWa = encodeURIComponent(waMessage);
+    const waUrl = getWhatsAppURL();
     if (waOrderBtn) {
-      waOrderBtn.href = `https://wa.me/919126431273?text=${encodedWa}`;
+      waOrderBtn.href = waUrl;
+      if (pack.isLocked) {
+        waOrderBtn.className = "flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs tracking-wide shadow-md transition-all";
+        waOrderBtn.innerHTML = `
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+          <span>Pre-Order Bulk on WhatsApp (50% Advance)</span>
+        `;
+      } else {
+        waOrderBtn.className = "flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs tracking-wide shadow-md transition-all";
+        waOrderBtn.innerHTML = `
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          <span>Send Order via WhatsApp</span>
+        `;
+      }
     }
 
-    // Build Email mailto link
-    const emailSubject = encodeURIComponent(`Order Inquiry: ${orderQuantity}x ${pack.name}`);
-    const emailBody = encodeURIComponent(waMessage);
+    // Direct Email mailto link
     if (mailOrderBtn) {
-      mailOrderBtn.href = `mailto:smjjlborah@gmail.com?subject=${emailSubject}&body=${emailBody}`;
+      const subject = encodeURIComponent(
+        pack.isLocked
+          ? `Bulk Pre-Order Request (${orderQuantity}x 5kg+ Wholesale)`
+          : `Order Request: ${orderQuantity}x ${pack.name}`
+      );
+      const body = encodeURIComponent(
+        pack.isLocked
+          ? `Hello KATHFULA Team,\n\nI want to place a Bulk Wholesale Pre-Order:\n- Quantity: ${orderQuantity} units\n- Note: 50% advance payment acknowledged.\n- Delivery details: ${userNote || "None"}\n\nPlease reply with bank details.`
+          : `Hello KATHFULA Team,\n\nI want to order:\n- ${orderQuantity}x ${pack.name} (@ ${pack.priceDisplay})\n- Total: ₹${orderQuantity * pack.unitPrice}\n- Delivery note: ${userNote || "None"}`
+      );
+      mailOrderBtn.href = `mailto:smjjlborah@gmail.com?subject=${subject}&body=${body}`;
     }
+  }
+
+  // Explicit click handler on WhatsApp order button ensuring popup success
+  if (waOrderBtn) {
+    waOrderBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetUrl = getWhatsAppURL();
+      window.open(targetUrl, "_blank");
+      showToast("Opening WhatsApp with your order...", "success");
+    });
   }
 
   packCards.forEach((card) => {
     card.addEventListener("click", () => {
       packCards.forEach((c) => {
-        c.classList.remove("selected", "border-forest-800", "bg-emerald-50/50");
-        c.classList.add("border-cream-300", "bg-white");
+        const isBulk = c.getAttribute("data-pack") === "bulk";
+        if (isBulk) {
+          c.classList.remove("border-rose-600", "bg-rose-100/60", "shadow-md");
+          c.classList.add("border-rose-300", "bg-rose-50/50");
+        } else {
+          c.classList.remove("selected", "border-forest-800", "bg-emerald-50/70", "shadow-md");
+          c.classList.add("border-cream-300", "bg-white");
+        }
       });
 
-      card.classList.add("selected", "border-forest-800", "bg-emerald-50/50");
-      card.classList.remove("border-cream-300", "bg-white");
-
       selectedPackKey = card.getAttribute("data-pack") || "200g";
+
+      if (selectedPackKey === "bulk") {
+        card.classList.add("border-rose-600", "bg-rose-100/60", "shadow-md");
+        card.classList.remove("border-rose-300", "bg-rose-50/50");
+      } else {
+        card.classList.add("selected", "border-forest-800", "bg-emerald-50/70", "shadow-md");
+        card.classList.remove("border-cream-300", "bg-white");
+      }
+
       updateOrderDisplay();
     });
   });
@@ -496,17 +581,16 @@ function initContactForm() {
       return;
     }
 
-    // Compose instant WhatsApp dispatch
     const text = encodeURIComponent(
-      `Hi Kathfula!\nName: ${name}\nPhone: ${phone}\nMessage: ${message || "I would like to inquire about fresh oyster mushrooms."}`
+      `Hello KATHFULA!\nName: ${name}\nPhone: ${phone}\nMessage: ${message || "I would like to inquire about fresh oyster mushrooms."}`
     );
-    const waUrl = `https://wa.me/919126431273?text=${text}`;
+    const waUrl = `https://api.whatsapp.com/send?phone=919126431273&text=${text}`;
 
-    showToast("Opening WhatsApp with your inquiry details...", "success");
+    showToast("Launching WhatsApp with your inquiry...", "success");
     setTimeout(() => {
       window.open(waUrl, "_blank");
       form.reset();
-    }, 800);
+    }, 400);
   });
 }
 
@@ -568,9 +652,9 @@ function initScrollEffects() {
 
     if (header) {
       if (scrollY > 20) {
-        header.classList.add("shadow-sm", "border-b", "border-cream-300");
+        header.classList.add("shadow-md", "border-b", "border-cream-300");
       } else {
-        header.classList.remove("shadow-sm", "border-b", "border-cream-300");
+        header.classList.remove("shadow-md", "border-b", "border-cream-300");
       }
     }
 
@@ -585,7 +669,7 @@ function initScrollEffects() {
     }
 
     if (mobileBar) {
-      if (scrollY > 250) {
+      if (scrollY > 200) {
         mobileBar.classList.remove("translate-y-full");
         mobileBar.classList.add("translate-y-0");
       } else {
