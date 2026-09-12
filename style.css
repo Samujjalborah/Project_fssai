@@ -90,6 +90,11 @@ html {
   background-color: #F3F8F5;
   box-shadow: 0 0 0 2px #1E3F2D;
 }
+.pack-card.pack-bulk.selected {
+  border-color: #BE123C !important;
+  background-color: #FFF1F2 !important;
+  box-shadow: 0 0 0 2px #BE123C !important;
+}
 
 /* Toast Notification styling */
 #toast-notification {
