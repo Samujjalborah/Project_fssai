@@ -3,227 +3,262 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KATHFULA — Fresh Oyster Mushrooms | Clean Nutrition & Farm-Direct Orders (₹59/200g)</title>
-  <meta name="description" content="Order farm-fresh Oyster Mushrooms (Pleurotus ostreatus) directly from KATHFULA, Tezpur, Assam. 200g: ₹59, 500g: ₹149, 1kg: ₹299. FSSAI certified, USDA nutrition data & recipes. Call/WhatsApp: +91 9126431273.">
-  
-  <!-- Tailwind CSS via CDN with customized earthy theme configuration -->
+  <title>KATHFULA — Fresh Oyster Mushrooms | USDA Nutrition, Prices & Direct Farm Orders</title>
+  <meta name="description" content="Order farm-fresh Oyster Mushrooms (Pleurotus ostreatus) directly from KATHFULA in Tezpur, Assam. 200g: ₹59, 500g: ₹149, 1kg: ₹299. FSSAI certified, USDA nutrition data & culinary prep tips. Call/WhatsApp: +91 9126431273.">
+  <meta name="keywords" content="Oyster mushrooms, Pleurotus ostreatus, Kathfula, buy fresh oyster mushrooms Tezpur Assam, mushroom prices, FSSAI mushroom, USDA nutrition oyster mushroom">
+  <meta name="author" content="KATHFULA">
+
+  <!-- Open Graph / Facebook / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://projectfssai.netlify.app/">
+  <meta property="og:title" content="KATHFULA — Fresh Oyster Mushrooms | FSSAI Certified">
+  <meta property="og:description" content="Order farm-fresh Oyster Mushrooms directly from Tezpur, Assam. 200g: ₹59, 500g: ₹149, 1kg: ₹299. FSSAI certified with verified USDA nutrition profile.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=1200&q=85">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://projectfssai.netlify.app/">
+  <meta name="twitter:title" content="KATHFULA — Fresh Oyster Mushrooms | Direct Farm Orders">
+  <meta name="twitter:description" content="Harvested daily in Tezpur, Assam. 200g: ₹59, 500g: ₹149, 1kg: ₹299. Direct WhatsApp orders and verified USDA nutritional profile.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=1200&q=85">
+
+  <link rel="canonical" href="https://projectfssai.netlify.app/">
+
+  <!-- Google Fonts: Fraunces (Editorial Serif) & Plus Jakarta Sans (Clean Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN with Custom Theme Config -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            cream: {
-              50: '#FDFBF7',
-              100: '#FAF7F2',
-              200: '#F4EFE6',
-              300: '#ECE3D4',
-              400: '#DED1BD'
-            },
             forest: {
               50: '#F0F5F2',
-              100: '#E1EBE4',
-              200: '#C2D7C9',
-              600: '#2D5A43',
-              700: '#234936',
+              100: '#E0ECE4',
+              200: '#C2D9CB',
+              300: '#99BEA8',
+              400: '#6FA384',
+              500: '#4D8865',
+              600: '#386D4F',
+              700: '#2A543D',
               800: '#1E3F2D',
               900: '#142B1F',
-              950: '#0B1912'
+              950: '#0B1711'
+            },
+            cream: {
+              50: '#FAF7F2',
+              100: '#F5EFE6',
+              200: '#EBE2D3',
+              300: '#DDD1BD',
+              400: '#CBBBA2',
+              500: '#B6A284'
             },
             sage: {
-              100: '#EEF3EF',
-              200: '#DCE6DF',
-              300: '#B8CEBF',
-              400: '#7E9F8A',
-              600: '#507A5E',
-              700: '#3F624B'
-            },
-            slate: {
-              600: '#4B5563',
-              700: '#374151',
-              800: '#1F2937',
-              900: '#111827'
-            },
-            terracotta: {
-              500: '#C26743',
-              600: '#AA5635'
+              300: '#8FB49D',
+              400: '#6E987E',
+              500: '#507A5E',
+              600: '#3D5E48'
             }
           },
           fontFamily: {
             serif: ['Fraunces', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif']
+            sans: ['Plus Jakarta Sans', 'system-ui', '-apple-system', 'sans-serif']
           }
         }
       }
     }
   </script>
 
-  <!-- External Stylesheet for custom fonts, scrollbars, and keyframes -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Embedded Custom Styles -->
+  <style>
+    :root {
+      --color-cream: #FAF7F2;
+      --color-forest: #1E3F2D;
+    }
+    body {
+      background-color: var(--color-cream);
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      color: #334155;
+    }
+    .glass-nav {
+      background: rgba(250, 247, 242, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .card-hover {
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -6px rgba(30, 63, 45, 0.12);
+    }
+    .wa-float-btn {
+      box-shadow: 0 8px 24px -4px rgba(37, 211, 102, 0.45);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .wa-float-btn:hover {
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 12px 28px -4px rgba(37, 211, 102, 0.55);
+    }
+    /* Hide number input spinner */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  </style>
 </head>
-<body class="bg-cream-100 text-slate-700 antialiased selection:bg-forest-100 selection:text-forest-800 flex flex-col min-h-screen pb-16 md:pb-0">
+<body class="min-h-screen flex flex-col antialiased selection:bg-emerald-100 selection:text-forest-900 pb-20 md:pb-0">
 
   <!-- ========================================================================= -->
-  <!-- TOP ANNOUNCEMENT BANNER                                                   -->
+  <!-- TOP ANNOUNCEMENT BAR (Verified Links & Certification)                     -->
   <!-- ========================================================================= -->
-  <div class="bg-forest-950 text-cream-100 text-xs py-2 px-4 border-b border-forest-800">
-    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left font-medium">
+  <div class="bg-forest-900 text-cream-50 py-2 px-4 text-xs border-b border-forest-800">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
         <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span>Daily Fresh Harvest Available • Tezpur, Assam • FSSAI Lic. No: <strong class="text-white">203261130000845</strong></span>
+        <span class="font-medium">Fresh Daily Harvest • Tezpur, Assam</span>
+        <span class="hidden sm:inline text-forest-300">|</span>
+        <span class="hidden sm:inline text-cream-200">FSSAI Lic. <strong class="text-white font-mono">203261130000845</strong></span>
       </div>
-      <div class="flex items-center gap-4 text-[11px]">
-        <a href="tel:+919126431273" class="hover:text-emerald-300 transition-colors flex items-center gap-1 font-semibold">
+      <div class="flex items-center gap-4 text-cream-200">
+        <a href="tel:+919126431273" class="hover:text-white flex items-center gap-1.5 transition-colors font-semibold">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-          <span>Call: +91 9126431273</span>
+          <span>Call +91 9126431273</span>
         </a>
-        <a href="mailto:smjjlborah@gmail.com" class="hover:text-emerald-300 transition-colors hidden md:inline-flex items-center gap-1">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          <span>smjjlborah@gmail.com</span>
+        <span class="text-forest-400">•</span>
+        <a href="qr_packaging_hub.html" class="hover:text-white transition-colors underline decoration-forest-400 text-cream-100 font-medium">
+          Packet QR & Labels
         </a>
       </div>
     </div>
   </div>
 
   <!-- ========================================================================= -->
-  <!-- NAVIGATION BAR                                                            -->
+  <!-- MAIN NAVIGATION HEADER                                                    -->
   <!-- ========================================================================= -->
-  <header id="main-header" class="sticky top-0 z-50 glass-nav transition-all duration-300 border-b border-cream-300/80">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+  <header id="main-header" class="sticky top-0 z-40 glass-nav border-b border-cream-300 transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between">
       
-      <!-- Brand & Taxonomy -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-2xl bg-forest-800 flex items-center justify-center text-cream-100 shadow-sm transition-transform duration-200 group-hover:scale-105">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.42 3.12 7.24.4.38.93.59 1.48.59h1.9c.83 0 1.5-.67 1.5-1.5V13.5c0-.83.67-1.5 1.5-1.5h1c.83 0 1.5.67 1.5 1.5v4.83c0 .83.67 1.5 1.5 1.5h1.9c.55 0 1.08-.21 1.48-.59C20.8 17.42 22 14.85 22 12c0-5.52-4.48-10-10-10zm-1 12h-1v-2h1v2zm3 0h-1v-2h1v2z"/>
-          </svg>
+      <!-- Brand Logo -->
+      <a href="#overview" class="flex items-center gap-3 group py-2">
+        <div class="w-10 h-10 rounded-2xl bg-forest-800 text-cream-50 flex items-center justify-center font-serif text-xl font-bold shadow-md group-hover:bg-forest-700 transition-colors">
+          K
         </div>
-        <div class="flex flex-col">
-          <div class="flex items-center gap-1.5">
-            <span class="font-serif font-extrabold text-xl tracking-tight text-forest-900 leading-tight">KATHFULA</span>
-            <span class="text-[9px] font-bold uppercase tracking-wider bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">Farm Fresh</span>
-          </div>
-          <span class="text-[11px] uppercase tracking-wider text-forest-700 font-medium italic">Fresh Oyster Mushrooms</span>
+        <div>
+          <span class="font-serif text-xl font-bold tracking-tight text-forest-900 block leading-tight">KATHFULA</span>
+          <span class="text-[10px] tracking-widest uppercase font-semibold text-emerald-700 block">Fresh Oyster Mushrooms</span>
         </div>
       </a>
 
       <!-- Desktop Navigation Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-600">
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-semibold text-slate-600">
         <a href="#overview" class="hover:text-forest-800 transition-colors">Overview</a>
-        <a href="#quick-facts" class="hover:text-forest-800 transition-colors">Nutrition</a>
-        <a href="#health-benefits" class="hover:text-forest-800 transition-colors">Benefits</a>
-        <a href="#preparation" class="hover:text-forest-800 transition-colors">Prep Tips</a>
-        <a href="#order-contact" class="hover:text-forest-800 font-bold text-forest-800 transition-colors flex items-center gap-1">
-          <span>Order & Pricing</span>
-          <span class="text-[10px] bg-amber-100 text-amber-800 px-1.5 py-0.2 rounded font-bold">₹59</span>
-        </a>
-        <a href="qr_packaging_hub.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-cream-200/80 hover:bg-cream-300 text-slate-700 transition-colors text-xs font-medium">
-          <svg class="w-3.5 h-3.5 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"/></svg>
-          <span>Packet QR</span>
-        </a>
+        <a href="#nutrition-table" class="hover:text-forest-800 transition-colors">USDA Nutrition</a>
+        <a href="#health-benefits" class="hover:text-forest-800 transition-colors">Health Benefits</a>
+        <a href="#preparation" class="hover:text-forest-800 transition-colors">Prep & Storage</a>
+        <a href="#order-contact" class="hover:text-forest-800 text-emerald-800 font-bold transition-colors">Order & Pricing</a>
+        <a href="qr_packaging_hub.html" class="hover:text-forest-800 transition-colors">QR Hub</a>
       </nav>
 
-      <!-- Header CTAs -->
+      <!-- Header Action CTAs -->
       <div class="hidden sm:flex items-center gap-3">
-        <a href="tel:+919126431273" class="hidden md:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-forest-900 bg-white border border-cream-300 rounded-xl hover:bg-cream-100 transition-colors shadow-sm">
-          <svg class="w-3.5 h-3.5 text-forest-700" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <a 
+          href="tel:+919126431273" 
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-forest-800/20 text-forest-900 hover:bg-cream-100 font-bold text-xs transition-colors"
+        >
+          <svg class="w-3.5 h-3.5 text-forest-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
           <span>9126431273</span>
         </a>
-        <a href="#order-contact" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold uppercase tracking-wider bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl shadow-sm transition-all duration-200 hover:shadow">
+        <a 
+          href="#order-contact" 
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-forest-800 hover:bg-forest-700 text-white font-bold text-xs tracking-wide shadow-sm transition-all"
+        >
           <span>Order Fresh</span>
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-          </svg>
+          <span class="text-emerald-300 font-bold">&rarr;</span>
         </a>
       </div>
 
-      <!-- Mobile Hamburger Button -->
-      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-cream-200 transition-colors" aria-label="Toggle navigation menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
+      <!-- Mobile Menu Toggle Button -->
+      <button 
+        id="mobile-menu-btn" 
+        class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-cream-200 transition-colors"
+        aria-label="Toggle navigation menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden border-t border-cream-300/80 bg-cream-50/98 backdrop-blur-lg px-4 pt-3 pb-6 space-y-2">
-      <a href="#overview" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Overview</a>
-      <a href="#quick-facts" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Key Metrics</a>
-      <a href="#nutrition-table" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Detailed Nutrition Table</a>
-      <a href="#health-benefits" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Health Benefits</a>
-      <a href="#preparation" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-700 hover:bg-cream-200">Culinary Prep & Storage</a>
-      <a href="#order-contact" class="mobile-nav-link block px-3 py-2.5 rounded-lg font-bold text-forest-900 bg-emerald-50 border border-emerald-300">🛒 Order Fresh Packs (200g @ ₹59)</a>
-      <a href="qr_packaging_hub.html" class="mobile-nav-link block px-3 py-2 rounded-md font-medium text-slate-600 hover:bg-cream-200">Packaging QR Code & Assets</a>
-      <div class="pt-2 flex flex-col gap-2">
-        <a href="https://api.whatsapp.com/send?phone=919126431273&text=Hi%20Kathfula!%20I%20would%20like%20to%20order%20fresh%20oyster%20mushrooms." target="_blank" class="block w-full text-center px-4 py-2.5 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-sm">
-          💬 Chat on WhatsApp (+91 9126431273)
-        </a>
-      </div>
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-cream-300 bg-cream-50/98 px-4 pt-3 pb-6 space-y-2 text-sm font-medium">
+      <a href="#overview" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-cream-200 text-slate-700">Overview</a>
+      <a href="#nutrition-table" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-cream-200 text-slate-700">USDA Nutrition</a>
+      <a href="#health-benefits" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-cream-200 text-slate-700">Health Benefits</a>
+      <a href="#preparation" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-cream-200 text-slate-700">Culinary Prep & Storage</a>
+      <a href="#order-contact" class="mobile-nav-link block px-3 py-2 rounded-lg bg-emerald-100 text-forest-900 font-bold">Order Fresh (From ₹59)</a>
+      <a href="qr_packaging_hub.html" class="mobile-nav-link block px-3 py-2 rounded-lg hover:bg-cream-200 text-slate-700">Packet QR & Labels Hub</a>
+      <a href="tel:+919126431273" class="mobile-nav-link block px-3 py-2 rounded-lg text-forest-800 font-bold">Call Farm: +91 9126431273</a>
     </div>
   </header>
 
   <!-- ========================================================================= -->
-  <!-- 1. VIBRANT HERO SECTION (Enhanced & Sautéed Dish Visual)                   -->
+  <!-- 1. HERO SECTION (High-Contrast, Authentic Sautéed Dish, Verified Prices)   -->
   <!-- ========================================================================= -->
-  <section id="overview" class="relative overflow-hidden pt-10 pb-20 md:pt-16 md:pb-28 border-b border-cream-300/80 bg-gradient-to-br from-cream-50 via-cream-100 to-emerald-50/40">
-    <!-- Ambient Botanical Lighting -->
-    <div class="absolute -top-24 -right-24 w-96 h-96 bg-emerald-200/40 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/3 -left-20 w-80 h-80 bg-amber-200/30 rounded-full blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+  <section id="overview" class="relative overflow-hidden pt-10 pb-16 lg:py-24 bg-gradient-to-b from-cream-100 via-cream-50 to-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
         <!-- Left Hero Content -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left reveal-on-scroll">
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
           
-          <!-- Brand Badge -->
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest-900 text-cream-100 text-xs font-semibold tracking-wide shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-soft-pulse"></span>
-            <span>KATHFULA • Rooted in Nature, Nourishing Tomorrow</span>
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-forest-800 text-xs font-bold shadow-xs">
+            <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+            <span>Harvesting Daily in Tezpur, Assam • From ₹59</span>
           </div>
 
-          <!-- High-Impact Title -->
-          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-forest-900 tracking-tight leading-[1.12]">
-            Pure Earth Nutrition. <br>
-            <span class="italic font-normal text-emerald-800">Freshly Sautéed Perfection.</span>
+          <h1 class="font-serif text-3xl sm:text-5xl lg:text-5.5xl font-extrabold text-forest-900 tracking-tight leading-[1.12]">
+            Fresh Oyster Mushrooms <br class="hidden sm:inline">
+            <span class="italic font-normal text-emerald-800">(Pleurotus ostreatus)</span>
           </h1>
 
-          <!-- Price Highlight Ribbon -->
-          <div class="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 bg-amber-100/90 border border-amber-300/80 px-3.5 py-2 rounded-2xl text-xs font-bold text-amber-950 shadow-sm">
-            <span>🏷️ Fresh Harvest Packs:</span>
-            <span class="bg-white px-2 py-0.5 rounded-lg border border-amber-200 text-forest-900">200g @ ₹59</span>
-            <span class="bg-white px-2 py-0.5 rounded-lg border border-amber-200 text-forest-900">500g @ ₹149</span>
-            <span class="bg-white px-2 py-0.5 rounded-lg border border-amber-200 text-forest-900">1kg @ ₹299</span>
-          </div>
-
-          <!-- Tagline -->
-          <p class="text-base sm:text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-            Cultivated with pure organic care in Tezpur, Assam. <strong class="text-forest-900 font-semibold">KATHFULA Oyster Mushrooms (<span class="italic font-normal">Pleurotus ostreatus</span>)</strong> deliver clean, cholesterol-free plant protein, immune-boosting beta-glucans, and an unforgettable savory umami finish when pan-seared with garlic and herbs.
+          <p class="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
+            Naturally cultivated oyster mushrooms rich in high-bioavailability protein, prebiotic beta-glucans, and ergothioneine. Harvested each morning in Tezpur, Assam under strict FSSAI food-grade certification.
           </p>
 
-          <!-- CTAs -->
-          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
-            <!-- Primary CTA -->
-            <a href="#order-contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-bold rounded-xl bg-emerald-700 text-white hover:bg-emerald-800 transition-all shadow-md hover:shadow-lg">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-              <span>Order Fresh Packs (From ₹59)</span>
+          <!-- Dual Conversion Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-2">
+            <a 
+              href="#order-contact" 
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl bg-forest-800 hover:bg-forest-700 text-white font-bold text-xs tracking-wide shadow-md transition-all card-hover"
+            >
+              <span>Order Fresh Pack (From ₹59)</span>
+              <span>&rarr;</span>
             </a>
-
-            <!-- WhatsApp Direct CTA -->
-            <a href="https://api.whatsapp.com/send?phone=919126431273&text=Hello%20Kathfula!%20I%20would%20like%20to%20order%20Fresh%20Oyster%20Mushrooms." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-bold rounded-xl bg-forest-900 hover:bg-forest-800 text-white transition-all shadow-md">
-              <svg class="w-4 h-4 fill-current text-emerald-400" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-              <span>WhatsApp: 9126431273</span>
+            <a 
+              href="https://api.whatsapp.com/send?phone=919126431273&text=Hi%20Kathfula!%20I%20would%20like%20to%20inquire%20about%20Fresh%20Oyster%20Mushrooms." 
+              target="_blank" 
+              class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl border-2 border-emerald-700 bg-white hover:bg-emerald-50 text-emerald-800 font-bold text-xs tracking-wide transition-all shadow-sm"
+            >
+              <svg class="w-4 h-4 fill-current text-emerald-600" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>WhatsApp Instant Order</span>
             </a>
           </div>
 
-          <!-- Trust Badges -->
-          <div class="pt-6 border-t border-cream-300/80 grid grid-cols-4 gap-2 text-center max-w-lg mx-auto lg:mx-0">
+          <!-- Key Quick Metrics -->
+          <div class="pt-6 border-t border-cream-300 grid grid-cols-4 gap-2 text-center max-w-lg mx-auto lg:mx-0">
             <div>
               <div class="text-xl font-bold font-serif text-forest-900">33 kcal</div>
               <div class="text-[11px] text-slate-500 font-medium">Per 100g</div>
             </div>
             <div class="border-l border-cream-300">
-              <div class="text-xl font-bold font-serif text-forest-900">3.3g</div>
+              <div class="text-xl font-bold font-serif text-forest-900">3.31g</div>
               <div class="text-[11px] text-slate-500 font-medium">Protein</div>
             </div>
             <div class="border-l border-cream-300">
@@ -237,15 +272,13 @@
           </div>
         </div>
 
-        <!-- Right Hero Visual: Authentic Pan-Sautéed Oyster Mushroom Dish -->
-        <div class="lg:col-span-5 relative reveal-on-scroll">
+        <!-- Right Hero Visual: Authentic Sautéed Oyster Mushroom Skillet -->
+        <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            
-            <!-- Sautéed Dish Image Container -->
             <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-cream-200 aspect-[4/3] sm:aspect-square group">
               <img 
                 src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=1200&q=85" 
-                alt="Golden pan-seared Oyster Mushrooms sizzling in a hot skillet with minced garlic, extra virgin olive oil and fresh rosemary herbs"
+                alt="Golden pan-sautéed Oyster Mushrooms sizzling in skillet with fresh rosemary and minced garlic"
                 class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                 loading="eager"
               />
@@ -254,20 +287,20 @@
               <!-- Floating Top Tag -->
               <div class="absolute top-4 left-4 bg-forest-900/90 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-xs font-bold border border-white/20 shadow-md flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-                <span>Pan-Sautéed Golden Oyster Mushrooms</span>
+                <span>Golden Pan-Sautéed Oyster Mushrooms</span>
               </div>
 
               <!-- Floating Bottom Pricing & Order Card -->
               <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl p-4 border border-white/60 shadow-xl space-y-2">
                 <div class="flex items-center justify-between">
                   <span class="text-xs font-extrabold text-forest-900 uppercase tracking-wide">KATHFULA FRESH PACKS</span>
-                  <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Harvested Today</span>
+                  <span class="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-2 py-0.5 rounded">Harvested Daily</span>
                 </div>
                 <div class="flex items-center justify-between pt-1 border-t border-cream-200 text-xs text-slate-700">
                   <div class="flex items-baseline gap-1">
                     <span class="text-xs text-slate-500">From</span>
                     <span class="text-lg font-extrabold text-forest-900">₹59</span>
-                    <span class="text-[11px] text-slate-500">(200g punnet)</span>
+                    <span class="text-[11px] text-slate-500">(200g retail punnet)</span>
                   </div>
                   <a href="#order-contact" class="font-bold text-xs text-white bg-emerald-700 hover:bg-emerald-800 px-3 py-1.5 rounded-lg transition-colors">
                     Order Now &rarr;
@@ -275,14 +308,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Decorative Leaf Icon Accent -->
-            <div class="absolute -bottom-5 -right-4 w-14 h-14 rounded-2xl bg-forest-800 text-white flex items-center justify-center shadow-xl border-2 border-white">
-              <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-              </svg>
-            </div>
-
           </div>
         </div>
 
@@ -292,503 +317,423 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 2. KEY NUTRITION HIGHLIGHTS (Quick-Glance Grid per 100g)                  -->
-  <!-- ========================================================================= -->
-  <section id="quick-facts" class="py-16 md:py-24 bg-cream-50 relative border-b border-cream-300/80">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <!-- Section Header with Serving Size Switcher -->
-      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 reveal-on-scroll">
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-forest-700">Quick-Glance Profile</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-1">
-            Key Nutrition Highlights
-          </h2>
-          <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-xl">
-            Clean macro distribution with natural hydration (89% water), rich prebiotic fibers, and zero saturated cholesterol.
-          </p>
-        </div>
-
-        <!-- Dynamic Serving Size Switcher -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3 bg-cream-200/80 p-1.5 rounded-2xl border border-cream-300">
-          <span class="text-xs font-semibold text-forest-900 px-2 sm:pl-3">Serving:</span>
-          <div class="flex gap-1">
-            <button class="serving-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-forest-800 text-white shadow-sm transition-all" data-grams="100">
-              100g (Standard)
-            </button>
-            <button class="serving-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-cream-100 transition-all" data-grams="86">
-              1 Cup Sliced (86g)
-            </button>
-            <button class="serving-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-cream-100 transition-all" data-grams="200">
-              200g (Meal Portion)
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4 Quick-Glance Cards Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal-on-scroll">
-        
-        <!-- Metric 1: Calories -->
-        <div class="card-hover bg-white rounded-3xl p-6 border border-cream-300/80 shadow-sm relative overflow-hidden">
-          <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
-            </svg>
-          </div>
-          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Energy Density</span>
-          <div class="flex items-baseline gap-1.5 mt-1">
-            <span id="highlight-calories" class="font-serif text-4xl font-extrabold text-forest-900 num-glow">33</span>
-            <span class="text-sm font-medium text-slate-500">kcal</span>
-          </div>
-          <p class="text-xs text-slate-600 mt-2">
-            Low caloric density promoting sustained fullness without caloric overload.
-          </p>
-          <div class="mt-4 pt-3 border-t border-cream-200 flex items-center justify-between text-[11px] text-slate-500">
-            <span>Daily Value</span>
-            <span class="font-semibold text-forest-800">~2% DV</span>
-          </div>
-        </div>
-
-        <!-- Metric 2: Protein -->
-        <div class="card-hover bg-white rounded-3xl p-6 border border-cream-300/80 shadow-sm relative overflow-hidden">
-          <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-forest-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-            </svg>
-          </div>
-          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Clean Protein</span>
-          <div class="flex items-baseline gap-1.5 mt-1">
-            <span id="highlight-protein" class="font-serif text-4xl font-extrabold text-forest-900 num-glow">3.3g</span>
-          </div>
-          <p class="text-xs text-slate-600 mt-2">
-            High-bioavailability plant protein supplying essential amino acids and BCAAs.
-          </p>
-          <div class="mt-4 pt-3 border-t border-cream-200 flex items-center justify-between text-[11px] text-slate-500">
-            <span>Daily Value</span>
-            <span class="font-semibold text-forest-800">~7% DV</span>
-          </div>
-        </div>
-
-        <!-- Metric 3: Dietary Fiber -->
-        <div class="card-hover bg-white rounded-3xl p-6 border border-cream-300/80 shadow-sm relative overflow-hidden">
-          <div class="w-12 h-12 rounded-2xl bg-teal-50 text-teal-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-            </svg>
-          </div>
-          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Dietary Fiber</span>
-          <div class="flex items-baseline gap-1.5 mt-1">
-            <span id="highlight-fiber" class="font-serif text-4xl font-extrabold text-forest-900 num-glow">2.3g</span>
-          </div>
-          <p class="text-xs text-slate-600 mt-2">
-            Naturally dense in beta-glucans and prebiotic fibers nourishing gut microbiome.
-          </p>
-          <div class="mt-4 pt-3 border-t border-cream-200 flex items-center justify-between text-[11px] text-slate-500">
-            <span>Daily Value</span>
-            <span class="font-semibold text-forest-800">~8% DV</span>
-          </div>
-        </div>
-
-        <!-- Metric 4: Fat -->
-        <div class="card-hover bg-white rounded-3xl p-6 border border-cream-300/80 shadow-sm relative overflow-hidden">
-          <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Total Lipids</span>
-          <div class="flex items-baseline gap-1.5 mt-1">
-            <span id="highlight-fat" class="font-serif text-4xl font-extrabold text-forest-900 num-glow">0.4g</span>
-          </div>
-          <p class="text-xs text-slate-600 mt-2">
-            Virtually zero dietary fats, 0mg cholesterol, and no saturated lipid load.
-          </p>
-          <div class="mt-4 pt-3 border-t border-cream-200 flex items-center justify-between text-[11px] text-slate-500">
-            <span>Daily Value</span>
-            <span class="font-semibold text-forest-800">&lt; 1% DV</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Additional Nutritional Indicators Ribbon -->
-      <div class="mt-8 bg-cream-200/60 rounded-2xl p-4 sm:p-5 border border-cream-300/70 flex flex-wrap items-center justify-around gap-4 text-xs font-medium text-slate-600 reveal-on-scroll">
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-forest-600"></span>
-          <span>Hydration Factor: <strong class="text-forest-900">89.2% Water</strong></span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-forest-600"></span>
-          <span>Net Carbohydrates: <strong class="text-forest-900">3.8g</strong></span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-forest-600"></span>
-          <span>Glycemic Index: <strong class="text-forest-900">Very Low (&lt; 15)</strong></span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-forest-600"></span>
-          <span>FSSAI License: <strong class="text-forest-900">203261130000845</strong></span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================= -->
-  <!-- 3. DETAILED NUTRITION TABLE                                               -->
+  <!-- 2. NUTRITION TABLE (Hardcoded USDA FoodData Central 100g Semantic Rows)    -->
   <!-- ========================================================================= -->
   <section id="nutrition-table" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <!-- Table Intro & Category Filters -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 reveal-on-scroll">
-      <div>
-        <span class="text-xs font-bold uppercase tracking-wider text-forest-700">Detailed Analytical Breakdown</span>
-        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-1">
-          Nutritional Facts Table
-        </h2>
-        <p class="text-slate-600 text-sm sm:text-base mt-2 max-w-2xl">
-          Values calibrated to <span id="current-serving-display" class="font-semibold text-forest-900">100g</span> raw serving of <em>Pleurotus ostreatus</em>. Daily Values (% DV) based on standard 2,000-calorie adult diet guidelines.
-        </p>
-      </div>
-
-      <!-- Filter Buttons -->
-      <div class="flex items-center gap-1.5 bg-white p-1.5 rounded-2xl border border-cream-300 self-start md:self-auto shadow-sm">
-        <button class="table-filter-btn active px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-forest-800 text-white shadow-sm transition-all" data-filter="all">
-          All Nutrients
-        </button>
-        <button class="table-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-cream-100 transition-all" data-filter="macro">
-          Macronutrients
-        </button>
-        <button class="table-filter-btn px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-cream-100 transition-all" data-filter="micro">
-          Vitamins & Minerals
-        </button>
-      </div>
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">Verified USDA FoodData Central Data</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-1">
+        USDA Nutritional Density & Profile
+      </h2>
+      <p class="text-slate-600 text-sm sm:text-base mt-2">
+        Standard nutritional composition per 100g raw Oyster Mushroom (<em>Pleurotus ostreatus</em>).
+      </p>
     </div>
 
-    <!-- Table Card Container -->
-    <div class="bg-white rounded-3xl border border-cream-300 shadow-sm overflow-hidden reveal-on-scroll">
+    <!-- Pre-rendered Semantic Table Card -->
+    <div class="bg-white rounded-3xl border border-cream-300 shadow-sm overflow-hidden">
+      
+      <!-- Table Header Summary Ribbon -->
+      <div class="p-6 bg-forest-900 text-cream-50 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h3 class="font-serif text-lg font-bold text-white">Nutritional Breakdown</h3>
+          <span class="text-xs text-cream-200">Values calibrated per 100g standard serving</span>
+        </div>
+        <div class="flex items-center gap-2 text-xs">
+          <span class="px-2.5 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-medium">FSSAI Certified</span>
+          <span class="px-2.5 py-1 rounded-full bg-cream-500/20 text-cream-200 border border-cream-500/30 font-medium">USDA Baseline</span>
+        </div>
+      </div>
+
+      <!-- Table Body -->
       <div class="overflow-x-auto">
         <table class="w-full text-left border-collapse">
           <thead>
-            <tr class="bg-cream-200/90 text-forest-900 text-xs uppercase tracking-wider border-b border-cream-300 font-serif">
-              <th class="py-4 px-4 sm:px-6 font-bold">Nutrient Profile</th>
-              <th class="py-4 px-4 text-right font-bold">Amount</th>
-              <th class="py-4 px-4 text-right font-bold">% Daily Value (DV)</th>
-              <th class="py-4 px-4 sm:px-6 font-bold hidden md:table-cell">Physiological Role & Bioactivity</th>
+            <tr class="border-b border-cream-200 bg-cream-50/60 text-slate-500 text-[11px] font-bold uppercase tracking-wider">
+              <th scope="col" class="py-3.5 px-4 sm:px-6">Nutrient</th>
+              <th scope="col" class="py-3.5 px-4 text-right">Amount (per 100g)</th>
+              <th scope="col" class="py-3.5 px-4 text-right">% Daily Value (DV)</th>
+              <th scope="col" class="py-3.5 px-4 sm:px-6 hidden md:table-cell">Physiological Function</th>
             </tr>
           </thead>
-          <tbody id="nutrition-table-body" class="divide-y divide-cream-200">
-            <!-- Dynamic Rows rendered by app.js -->
+          <tbody class="divide-y divide-cream-200 text-xs sm:text-sm">
+            
+            <!-- 1. Energy -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Energy (Calories)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">Macro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                33 <span class="text-xs font-normal text-slate-500">kcal</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 2%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">~2%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Low caloric density, ideal for metabolic health and calorie-conscious diets.
+              </td>
+            </tr>
+
+            <!-- 2. Protein -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Plant-Based Protein</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">Macro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                3.31 <span class="text-xs font-normal text-slate-500">g</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 7%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">~7%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Contains all 9 essential amino acids with high fungal bioavailability.
+              </td>
+            </tr>
+
+            <!-- 3. Total Lipids -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Total Lipids (Fat)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">Macro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                0.41 <span class="text-xs font-normal text-slate-500">g</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 1%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">&lt;1%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Virtually fat-free with 0g saturated fats and zero dietary cholesterol.
+              </td>
+            </tr>
+
+            <!-- 4. Dietary Fiber -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Dietary Fiber</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">Macro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                2.3 <span class="text-xs font-normal text-slate-500">g</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 8%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">~8%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Rich in prebiotic soluble Beta-D-glucans that support gut microbiome health.
+              </td>
+            </tr>
+
+            <!-- 5. Total Carbohydrates -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Total Carbohydrates</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">Macro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                6.09 <span class="text-xs font-normal text-slate-500">g</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 2%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">~2%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Low glycemic impact with 3.8g net carbs per 100g.
+              </td>
+            </tr>
+
+            <!-- 6. Niacin (B3) -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Niacin (Vitamin B3)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">Micro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                4.96 <span class="text-xs font-normal text-slate-500">mg</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-emerald-600 h-full rounded-full" style="width: 31%"></div>
+                  </div>
+                  <span class="font-bold text-emerald-800 min-w-[34px]">31%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Vital for cellular energy metabolism, DNA repair, and lipid balance.
+              </td>
+            </tr>
+
+            <!-- 7. Riboflavin (B2) -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Riboflavin (Vitamin B2)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">Micro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                0.35 <span class="text-xs font-normal text-slate-500">mg</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-emerald-600 h-full rounded-full" style="width: 27%"></div>
+                  </div>
+                  <span class="font-bold text-emerald-800 min-w-[34px]">27%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Essential coenzyme in ATP synthesis and mitochondrial respiration.
+              </td>
+            </tr>
+
+            <!-- 8. Folate (B9) -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Folate (Vitamin B9)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">Micro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                38 <span class="text-xs font-normal text-slate-500">µg</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 10%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">10%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Supports red blood cell creation, methylation, and healthy cellular division.
+              </td>
+            </tr>
+
+            <!-- 9. Potassium -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Potassium (K)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">Micro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                420 <span class="text-xs font-normal text-slate-500">mg</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 9%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">9%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Maintains optimal intracellular osmotic pressure and vascular relaxation.
+              </td>
+            </tr>
+
+            <!-- 10. Phosphorus -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Phosphorus (P)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">Micro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                120 <span class="text-xs font-normal text-slate-500">mg</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 10%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">10%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Key building block of bone mineral matrix, cell membranes, and ATP.
+              </td>
+            </tr>
+
+            <!-- 11. Iron -->
+            <tr class="hover:bg-cream-50/70 transition-colors">
+              <td class="py-3.5 px-4 sm:px-6 font-semibold text-forest-900 flex items-center gap-2">
+                <span>Iron (Fe)</span>
+                <span class="text-[10px] font-mono px-2 py-0.5 rounded-full bg-amber-50 text-amber-800 border border-amber-200">Micro</span>
+              </td>
+              <td class="py-3.5 px-4 text-right font-bold text-slate-900">
+                1.33 <span class="text-xs font-normal text-slate-500">mg</span>
+              </td>
+              <td class="py-3.5 px-4 text-right">
+                <div class="inline-flex items-center justify-end gap-2">
+                  <div class="w-12 bg-cream-200 h-1.5 rounded-full overflow-hidden hidden sm:block">
+                    <div class="bg-forest-600 h-full rounded-full" style="width: 7%"></div>
+                  </div>
+                  <span class="font-bold text-forest-800 min-w-[34px]">7%</span>
+                </div>
+              </td>
+              <td class="py-3.5 px-4 sm:px-6 text-slate-600 text-xs hidden md:table-cell">
+                Supports hemoglobin synthesis and oxygen transport throughout body tissues.
+              </td>
+            </tr>
+
           </tbody>
         </table>
       </div>
 
-      <!-- Table Footer Note -->
-      <div class="px-6 py-4 bg-cream-50 border-t border-cream-200/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-2">
-        <span class="flex items-center gap-1.5">
-          <svg class="w-4 h-4 text-forest-700 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-          </svg>
-          Standard reference data: USDA FoodData Central (FDC ID: 168580 / Pleurotus ostreatus).
-        </span>
-        <span class="font-mono text-[11px] text-forest-700 bg-forest-50 px-2 py-0.5 rounded border border-forest-100">
-          Niacin: 31% DV • Riboflavin: 27% DV
-        </span>
+      <div class="p-4 bg-cream-50 border-t border-cream-200 text-center text-xs text-slate-500">
+        Source: USDA FoodData Central (FDC ID: 169248 / Standard Reference Legacy for Pleurotus ostreatus).
       </div>
     </div>
-
   </section>
 
 
   <!-- ========================================================================= -->
-  <!-- 4. CORE HEALTH BENEFITS                                                   -->
+  <!-- 3. HEALTH BENEFITS (Strict Semantic Hierarchy h2 -> h3)                   -->
   <!-- ========================================================================= -->
-  <section id="health-benefits" class="py-16 md:py-24 bg-cream-200/60 border-y border-cream-300/80 relative">
+  <section id="health-benefits" class="py-16 md:py-24 bg-cream-100/60 border-t border-cream-300">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto mb-16 reveal-on-scroll">
-        <span class="text-xs font-bold uppercase tracking-wider text-forest-700">Evidence-Based Wellness</span>
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-wider text-emerald-800">Therapeutic Phytonutrients</span>
         <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-900 mt-1">
-          Core Health Benefits
+          Evidence-Based Health Benefits
         </h2>
         <p class="text-slate-600 text-sm sm:text-base mt-2">
-          Beyond culinary deliciousness, oyster mushrooms synthesize bioactive compounds that modulate immunity, protect heart health, and promote cellular defense.
+          Backed by peer-reviewed mycological and biomedical research for whole-body wellness.
         </p>
       </div>
 
-      <!-- 4 Minimalist Feature Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <!-- Card 1: Immune Support (Beta-glucans) -->
-        <div class="card-hover bg-white rounded-3xl p-8 border border-cream-300/90 shadow-sm flex flex-col justify-between reveal-on-scroll">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <div class="w-14 h-14 rounded-2xl bg-forest-50 text-forest-800 flex items-center justify-center border border-forest-100">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                </svg>
-              </div>
-              <span class="text-[11px] font-mono uppercase tracking-wider bg-forest-100/70 text-forest-800 px-3 py-1 rounded-full font-semibold">
-                Beta-D-Glucans
-              </span>
-            </div>
-
-            <h3 class="font-serif text-2xl font-bold text-forest-900 mb-2">
-              Immune System Modulation
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-              Oyster mushrooms are rich in fungal <strong class="text-forest-900 font-semibold">β-(1,3/1,6)-D-glucans</strong>, naturally occurring polysaccharides that bind to dectin-1 receptors on macrophages, neutrophils, and Natural Killer (NK) cells to prime host defense mechanisms without inducing hyperinflammation.
-            </p>
+        <!-- Card 1 -->
+        <div class="bg-white p-6 rounded-3xl border border-cream-300 shadow-sm card-hover space-y-3">
+          <div class="w-11 h-11 rounded-2xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold">
+            🛡️
           </div>
-
-          <div class="pt-4 border-t border-cream-200">
-            <div class="flex items-center gap-2 text-xs text-forest-700 font-medium">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span>Stimulates cytokine signaling and protective antibody production</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2: Heart & Cholesterol Health (Statins / Lovastatin) -->
-        <div class="card-hover bg-white rounded-3xl p-8 border border-cream-300/90 shadow-sm flex flex-col justify-between reveal-on-scroll">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <div class="w-14 h-14 rounded-2xl bg-amber-50 text-terracotta-500 flex items-center justify-center border border-amber-100">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                </svg>
-              </div>
-              <span class="text-[11px] font-mono uppercase tracking-wider bg-amber-100/70 text-terracotta-600 px-3 py-1 rounded-full font-semibold">
-                Natural Lovastatin
-              </span>
-            </div>
-
-            <h3 class="font-serif text-2xl font-bold text-forest-900 mb-2">
-              Heart & Cholesterol Regulation
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-              <em>Pleurotus ostreatus</em> is one of the few natural dietary sources containing up to 2.8% dry-weight of <strong class="text-forest-900 font-semibold">Lovastatin (mevinolin)</strong>. This compound competitively inhibits HMG-CoA reductase, the rate-limiting enzyme in hepatic cholesterol biosynthesis, aiding balanced lipid profiles.
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-cream-200">
-            <div class="flex items-center gap-2 text-xs text-forest-700 font-medium">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span>Supports healthy arterial elasticity and low circulating LDL</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3: High Antioxidant Content (Ergothioneine) -->
-        <div class="card-hover bg-white rounded-3xl p-8 border border-cream-300/90 shadow-sm flex flex-col justify-between reveal-on-scroll">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <div class="w-14 h-14 rounded-2xl bg-teal-50 text-teal-800 flex items-center justify-center border border-teal-100">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-                </svg>
-              </div>
-              <span class="text-[11px] font-mono uppercase tracking-wider bg-teal-100/70 text-teal-800 px-3 py-1 rounded-full font-semibold">
-                Ergothioneine
-              </span>
-            </div>
-
-            <h3 class="font-serif text-2xl font-bold text-forest-900 mb-2">
-              Cellular Longevity & Antioxidants
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-              Known by gerontologists as the "longevity vitamin," <strong class="text-forest-900 font-semibold">L-Ergothioneine</strong> possesses a dedicated cellular transporter (OCTN1) in humans. It concentrates within mitochondria, quenching free radicals and guarding cells against oxidative damage.
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-cream-200">
-            <div class="flex items-center gap-2 text-xs text-forest-700 font-medium">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span>Heat-stable antioxidant that protects mitochondrial membranes</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4: Low-Calorie Plant Protein Source -->
-        <div class="card-hover bg-white rounded-3xl p-8 border border-cream-300/90 shadow-sm flex flex-col justify-between reveal-on-scroll">
-          <div>
-            <div class="flex items-center justify-between mb-6">
-              <div class="w-14 h-14 rounded-2xl bg-emerald-50 text-forest-800 flex items-center justify-center border border-emerald-100">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
-                </svg>
-              </div>
-              <span class="text-[11px] font-mono uppercase tracking-wider bg-emerald-100/70 text-forest-800 px-3 py-1 rounded-full font-semibold">
-                Clean Protein
-              </span>
-            </div>
-
-            <h3 class="font-serif text-2xl font-bold text-forest-900 mb-2">
-              Low-Calorie Plant Protein Source
-            </h3>
-            <p class="text-slate-600 text-sm leading-relaxed mb-4">
-              With 3.3g protein per 33 calories, oyster mushrooms boast an exceptional protein-to-calorie ratio. They deliver high biological value without the inflammatory purines or cholesterol found in conventional red meats, making them a cornerstone for plant-forward diets.
-            </p>
-          </div>
-
-          <div class="pt-4 border-t border-cream-200">
-            <div class="flex items-center gap-2 text-xs text-forest-700 font-medium">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-              <span>Negligible glycemic response with high gastric satiety</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ========================================================================= -->
-  <!-- 5. PREPARATION & STORAGE TIPS                                             -->
-  <!-- ========================================================================= -->
-  <section id="preparation" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="bg-forest-900 text-cream-50 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-xl reveal-on-scroll">
-      
-      <!-- Subtle Decorative Background Pattern -->
-      <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-forest-800/60 rounded-full blur-3xl pointer-events-none"></div>
-
-      <div class="relative z-10">
-        
-        <!-- Section Title -->
-        <div class="max-w-2xl mb-10">
-          <span class="text-xs font-bold uppercase tracking-wider text-sage-400">Preserving Flavor & Phytonutrients</span>
-          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">
-            Preparation & Storage Tips
-          </h2>
-          <p class="text-cream-300 text-sm sm:text-base mt-2">
-            Oyster mushrooms feature delicate gills that release their best flavor and retain key nutrients when stored dry and flash-cooked over medium-high heat.
+          <h3 class="font-serif text-lg font-bold text-forest-900">Immune Modulation</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Concentrated (1,3/1,6)-Beta-D-glucans activate circulating macrophages and Natural Killer (NK) cells to bolster innate viral resistance.
           </p>
         </div>
 
-        <!-- Interactive Guide Tabs -->
-        <div class="flex flex-wrap gap-2 mb-8 border-b border-forest-800 pb-4">
-          <button class="prep-tab-btn active px-4 py-2 rounded-xl text-xs font-semibold bg-forest-800 text-white shadow-sm border border-forest-700 transition-all" data-tab="tab-storage">
-            1. Proper Storage
-          </button>
-          <button class="prep-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/10 text-cream-200 hover:bg-white/20 transition-all" data-tab="tab-saute">
-            2. The Flash Sauté
-          </button>
-          <button class="prep-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/10 text-cream-200 hover:bg-white/20 transition-all" data-tab="tab-bioavail">
-            3. Nutrient Bioavailability
-          </button>
+        <!-- Card 2 -->
+        <div class="bg-white p-6 rounded-3xl border border-cream-300 shadow-sm card-hover space-y-3">
+          <div class="w-11 h-11 rounded-2xl bg-rose-100 text-rose-800 flex items-center justify-center font-bold">
+            ❤️
+          </div>
+          <h3 class="font-serif text-lg font-bold text-forest-900">Cardiovascular Health</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Naturally synthesized lovastatin (mevinolin) modulates HMG-CoA reductase to support optimal LDL/HDL cholesterol ratios and arterial elasticity.
+          </p>
         </div>
 
-        <!-- Tab 1: Storage -->
-        <div id="tab-storage" class="prep-pane space-y-6">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            
-            <div class="bg-forest-800/60 p-6 rounded-2xl border border-forest-700/60">
-              <div class="w-10 h-10 rounded-xl bg-sage-600/30 text-sage-300 flex items-center justify-center mb-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-              </div>
-              <h4 class="font-serif text-lg font-bold text-white mb-1">Brown Paper Bag</h4>
-              <p class="text-xs text-cream-300 leading-relaxed">
-                Store unwashed in a breathable brown paper bag. Never seal in airtight plastic, which traps moisture and accelerates slime formation.
-              </p>
-            </div>
-
-            <div class="bg-forest-800/60 p-6 rounded-2xl border border-forest-700/60">
-              <div class="w-10 h-10 rounded-xl bg-sage-600/30 text-sage-300 flex items-center justify-center mb-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-              </div>
-              <h4 class="font-serif text-lg font-bold text-white mb-1">3–5 Days Shelf Life</h4>
-              <p class="text-xs text-cream-300 leading-relaxed">
-                Keep in the main compartment of the refrigerator at 34–38°F (1–3°C). Use within 3 to 5 days for optimal firmness and sweetness.
-              </p>
-            </div>
-
-            <div class="bg-forest-800/60 p-6 rounded-2xl border border-forest-700/60">
-              <div class="w-10 h-10 rounded-xl bg-sage-600/30 text-sage-300 flex items-center justify-center mb-3">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/></svg>
-              </div>
-              <h4 class="font-serif text-lg font-bold text-white mb-1">Dry Brush Cleaning</h4>
-              <p class="text-xs text-cream-300 leading-relaxed">
-                Clean right before cooking using a damp paper towel or soft culinary brush. Avoid submerging in water—their sponge-like gills absorb excess liquid.
-              </p>
-            </div>
-
+        <!-- Card 3 -->
+        <div class="bg-white p-6 rounded-3xl border border-cream-300 shadow-sm card-hover space-y-3">
+          <div class="w-11 h-11 rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold">
+            ✨
           </div>
+          <h3 class="font-serif text-lg font-bold text-forest-900">Cellular Longevity</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Contains high levels of L-Ergothioneine—a potent intracellular antioxidant that protects mitochondrial DNA against oxidative peroxidation.
+          </p>
         </div>
 
-        <!-- Tab 2: Sauté -->
-        <div id="tab-saute" class="prep-pane hidden space-y-6">
-          <div class="bg-forest-800/80 p-6 sm:p-8 rounded-2xl border border-forest-700/80">
-            <h4 class="font-serif text-xl font-bold text-white mb-4 flex items-center gap-2">
-              <span>The 3-Step Nutrient-Preserving Sauté</span>
-            </h4>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-cream-200">
-              <div class="space-y-2">
-                <div class="w-7 h-7 rounded-full bg-sage-600 text-white flex items-center justify-center font-bold">1</div>
-                <h5 class="font-bold text-sm text-white">Dry Sear (2 Mins)</h5>
-                <p class="leading-relaxed">
-                  Tear clusters into bite-sized shreds. Place in a wide, dry, hot skillet over medium-high heat. Allow initial moisture to evaporate and edges to brown lightly.
-                </p>
-              </div>
-              <div class="space-y-2">
-                <div class="w-7 h-7 rounded-full bg-sage-600 text-white flex items-center justify-center font-bold">2</div>
-                <h5 class="font-bold text-sm text-white">Add Healthy Fats (2 Mins)</h5>
-                <p class="leading-relaxed">
-                  Drizzle 1 tbsp cold-pressed extra virgin olive oil or butter. Toss in minced garlic and fresh thyme sprigs. Sauté until golden and crisped.
-                </p>
-              </div>
-              <div class="space-y-2">
-                <div class="w-7 h-7 rounded-full bg-sage-600 text-white flex items-center justify-center font-bold">3</div>
-                <h5 class="font-bold text-sm text-white">Finish Off Heat</h5>
-                <p class="leading-relaxed">
-                  Remove from direct flame before seasoning with sea salt and cracked pepper. Seasoning at the end prevents premature water weeping and preserves crisp texture.
-                </p>
-              </div>
-            </div>
+        <!-- Card 4 -->
+        <div class="bg-white p-6 rounded-3xl border border-cream-300 shadow-sm card-hover space-y-3">
+          <div class="w-11 h-11 rounded-2xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold">
+            ⚖️
           </div>
-        </div>
-
-        <!-- Tab 3: Bioavailability -->
-        <div id="tab-bioavail" class="prep-pane hidden space-y-6">
-          <div class="bg-forest-800/80 p-6 sm:p-8 rounded-2xl border border-forest-700/80">
-            <h4 class="font-serif text-xl font-bold text-white mb-3">
-              Why Cooking Unlocks Nutrients
-            </h4>
-            <p class="text-xs sm:text-sm text-cream-300 leading-relaxed mb-4">
-              Fungal cell walls are composed of rigid <strong class="text-white">chitin</strong>. Gentle heating breaks down this matrix, liberating intracellular <strong class="text-white">beta-glucans, ergothioneine, and bioavailable protein</strong> so your digestive tract can absorb them efficiently.
-            </p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-              <div class="bg-forest-900/60 p-4 rounded-xl border border-forest-700">
-                <strong class="text-emerald-400 block mb-1">✓ Heat Stability</strong>
-                <span>Ergothioneine and beta-glucans tolerate high sauté temperatures up to 350°F (177°C) without denaturation.</span>
-              </div>
-              <div class="bg-forest-900/60 p-4 rounded-xl border border-forest-700">
-                <strong class="text-amber-400 block mb-1">⚡ Fat Soluble Synergy</strong>
-                <span>Pairing oyster mushrooms with a drizzle of healthy lipid enhances absorption of naturally synthesized Vitamin D2.</span>
-              </div>
-            </div>
-          </div>
+          <h3 class="font-serif text-lg font-bold text-forest-900">Metabolic Support</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Low glycemic impact (3.8g net carbs) and prebiotic dietary fiber improve insulin receptor sensitivity and nourish beneficial gut microbiota.
+          </p>
         </div>
 
       </div>
-
     </div>
   </section>
 
 
   <!-- ========================================================================= -->
-  <!-- 6. CONTACT & DIRECT ORDER MVP (EXACT PRICING & LOCKED BULK)               -->
+  <!-- 4. CULINARY PREP & STORAGE (Semantic Hierarchy h2 -> h3)                  -->
   <!-- ========================================================================= -->
-  <section id="order-contact" class="py-16 md:py-24 bg-cream-50 border-t border-cream-300 relative">
+  <section id="preparation" class="py-16 md:py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-forest-900 text-cream-50 rounded-3xl p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-xl">
+      
+      <div class="max-w-2xl mb-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-sage-400">Preserving Flavor & Phytonutrients</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mt-1">
+          Preparation & Storage Guide
+        </h2>
+        <p class="text-cream-200 text-sm sm:text-base mt-2">
+          Oyster mushrooms feature delicate gills that release their best flavor and retain key nutrients when kept dry and flash-cooked over medium-high heat.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <div class="bg-forest-800/70 p-6 rounded-2xl border border-forest-700/60 space-y-2">
+          <div class="w-9 h-9 rounded-xl bg-sage-500/30 text-sage-300 flex items-center justify-center font-bold text-sm">1</div>
+          <h3 class="font-serif text-lg font-bold text-white">Breathable Paper Bag</h3>
+          <p class="text-xs text-cream-200 leading-relaxed">
+            Store unwashed in a breathable brown paper bag in the main refrigerator compartment (34–38°F). Never seal in airtight plastic bags.
+          </p>
+        </div>
+
+        <div class="bg-forest-800/70 p-6 rounded-2xl border border-forest-700/60 space-y-2">
+          <div class="w-9 h-9 rounded-xl bg-sage-500/30 text-sage-300 flex items-center justify-center font-bold text-sm">2</div>
+          <h3 class="font-serif text-lg font-bold text-white">The Flash Sauté</h3>
+          <p class="text-xs text-cream-200 leading-relaxed">
+            Tear into bite-sized clusters. Dry-sear in a hot skillet for 2 minutes, then add olive oil or butter, minced garlic, and herbs until edges are crisp.
+          </p>
+        </div>
+
+        <div class="bg-forest-800/70 p-6 rounded-2xl border border-forest-700/60 space-y-2">
+          <div class="w-9 h-9 rounded-xl bg-sage-500/30 text-sage-300 flex items-center justify-center font-bold text-sm">3</div>
+          <h3 class="font-serif text-lg font-bold text-white">Heat Unlocks Nutrients</h3>
+          <p class="text-xs text-cream-200 leading-relaxed">
+            Gentle cooking breaks down tough chitin cell walls, liberating intracellular beta-glucans and proteins for superior digestive bioavailability.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================================= -->
+  <!-- 5. DIRECT ORDER & PRICING MVP (Accessible Radio Peer Selection)           -->
+  <!-- ========================================================================= -->
+  <section id="order-contact" class="py-16 md:py-24 bg-cream-50 border-t border-cream-300">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center max-w-2xl mx-auto mb-14 reveal-on-scroll">
+      <div class="text-center max-w-2xl mx-auto mb-14">
         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-100 text-forest-800 text-xs font-bold mb-3">
           <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
           <span>Direct Farm Orders & Pricing</span>
@@ -797,7 +742,7 @@
           Order Fresh KATHFULA Mushrooms
         </h2>
         <p class="text-slate-600 text-sm sm:text-base mt-2">
-          Harvested daily in Tezpur, Assam. Choose your fresh pack below with verified pricing. Fast direct dispatch on WhatsApp or phone!
+          Harvested daily in Tezpur, Assam. Select your fresh pack below. Instant dispatch via WhatsApp!
         </p>
       </div>
 
@@ -805,117 +750,123 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         <!-- Left Column: Interactive Pack & Order Estimator -->
-        <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-cream-300 shadow-sm space-y-6 reveal-on-scroll">
+        <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-cream-300 shadow-sm space-y-6">
           
           <div class="flex items-center justify-between pb-4 border-b border-cream-200">
             <div>
               <h3 class="font-serif text-xl font-bold text-forest-900">1. Select Your Pack</h3>
-              <p class="text-xs text-slate-500 mt-0.5">Sealed in fresh food-grade breathable punnets</p>
+              <p class="text-xs text-slate-500 mt-0.5">Sealed in food-grade breathable punnets</p>
             </div>
             <span class="text-[11px] font-mono font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
-              Fresh Today
+              Fresh Daily
             </span>
           </div>
 
-          <!-- Pack Sizing Cards Grid with Exact Prices -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <!-- Accessible Radio Pack Sizing Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5" role="radiogroup" aria-label="Pack selection">
             
             <!-- Pack 1: 200g Punnet (₹59) -->
-            <div 
-              id="pack-card-200g" 
-              class="pack-card selected p-4 rounded-2xl border-2 border-forest-800 bg-emerald-50/80 cursor-pointer transition-all card-hover relative ring-2 ring-forest-800/20" 
-              data-pack="200g"
-              onclick="selectPack('200g')"
-              role="button"
-              tabindex="0"
-            >
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-forest-800 text-white px-2 py-0.5 rounded-full">
-                Most Popular
-              </span>
-              <div class="font-serif font-bold text-lg text-forest-900">200g Punnet</div>
-              <div class="flex items-baseline gap-1 my-1">
-                <span class="text-2xl font-extrabold text-forest-900">₹59</span>
-                <span class="text-xs text-slate-500">/ pack</span>
+            <label class="relative block cursor-pointer select-none">
+              <input 
+                type="radio" 
+                name="pack_type" 
+                value="200g" 
+                checked 
+                class="peer sr-only"
+                id="pack-choice-200g"
+              />
+              <div class="p-4 rounded-2xl border-2 border-cream-300 bg-white transition-all card-hover peer-checked:border-forest-800 peer-checked:bg-emerald-50/80 peer-checked:ring-2 peer-checked:ring-forest-800/20 peer-focus-visible:ring-4 peer-focus-visible:ring-forest-700">
+                <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-forest-800 text-white px-2 py-0.5 rounded-full">
+                  Most Popular
+                </span>
+                <div class="font-serif font-bold text-lg text-forest-900">200g Punnet</div>
+                <div class="flex items-baseline gap-1 my-1">
+                  <span class="text-2xl font-extrabold text-forest-900">₹59</span>
+                  <span class="text-xs text-slate-500">/ pack</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Standard fresh retail pack for 2–3 servings. Sealed with breathable label.
+                </p>
               </div>
-              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                Standard fresh retail pack for 2–3 servings. Sealed with breathable label.
-              </p>
-            </div>
+            </label>
 
             <!-- Pack 2: 500g Fresh Pack (₹149) -->
-            <div 
-              id="pack-card-500g" 
-              class="pack-card p-4 rounded-2xl border-2 border-cream-300 bg-white cursor-pointer transition-all card-hover relative" 
-              data-pack="500g"
-              onclick="selectPack('500g')"
-              role="button"
-              tabindex="0"
-            >
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-forest-800 px-2 py-0.5 rounded-full">
-                Best Value
-              </span>
-              <div class="font-serif font-bold text-lg text-forest-900">500g Fresh Pack</div>
-              <div class="flex items-baseline gap-1 my-1">
-                <span class="text-2xl font-extrabold text-forest-900">₹149</span>
-                <span class="text-xs text-slate-500">/ pack</span>
+            <label class="relative block cursor-pointer select-none">
+              <input 
+                type="radio" 
+                name="pack_type" 
+                value="500g" 
+                class="peer sr-only"
+                id="pack-choice-500g"
+              />
+              <div class="p-4 rounded-2xl border-2 border-cream-300 bg-white transition-all card-hover peer-checked:border-forest-800 peer-checked:bg-emerald-50/80 peer-checked:ring-2 peer-checked:ring-forest-800/20 peer-focus-visible:ring-4 peer-focus-visible:ring-forest-700">
+                <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-emerald-100 text-forest-800 px-2 py-0.5 rounded-full">
+                  Best Value
+                </span>
+                <div class="font-serif font-bold text-lg text-forest-900">500g Fresh Pack</div>
+                <div class="flex items-baseline gap-1 my-1">
+                  <span class="text-2xl font-extrabold text-forest-900">₹149</span>
+                  <span class="text-xs text-slate-500">/ pack</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Family meal prep size for stir-fries, noodle bowls, and rich curries.
+                </p>
               </div>
-              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                Family meal prep size for stir-fries, noodle bowls, and rich curries.
-              </p>
-            </div>
+            </label>
 
             <!-- Pack 3: 1kg Culinary Crate (₹299) -->
-            <div 
-              id="pack-card-1kg" 
-              class="pack-card p-4 rounded-2xl border-2 border-cream-300 bg-white cursor-pointer transition-all card-hover relative" 
-              data-pack="1kg"
-              onclick="selectPack('1kg')"
-              role="button"
-              tabindex="0"
-            >
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">
-                Chef Choice
-              </span>
-              <div class="font-serif font-bold text-lg text-forest-900">1kg Crate</div>
-              <div class="flex items-baseline gap-1 my-1">
-                <span class="text-2xl font-extrabold text-forest-900">₹299</span>
-                <span class="text-xs text-slate-500">/ crate</span>
+            <label class="relative block cursor-pointer select-none">
+              <input 
+                type="radio" 
+                name="pack_type" 
+                value="1kg" 
+                class="peer sr-only"
+                id="pack-choice-1kg"
+              />
+              <div class="p-4 rounded-2xl border-2 border-cream-300 bg-white transition-all card-hover peer-checked:border-forest-800 peer-checked:bg-emerald-50/80 peer-checked:ring-2 peer-checked:ring-forest-800/20 peer-focus-visible:ring-4 peer-focus-visible:ring-forest-700">
+                <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full">
+                  Chef Choice
+                </span>
+                <div class="font-serif font-bold text-lg text-forest-900">1kg Crate</div>
+                <div class="flex items-baseline gap-1 my-1">
+                  <span class="text-2xl font-extrabold text-forest-900">₹299</span>
+                  <span class="text-xs text-slate-500">/ crate</span>
+                </div>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Freshly harvested batch for dinner parties, sautés, and food lovers.
+                </p>
               </div>
-              <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                Freshly harvested batch for dinner parties, sautés, and food lovers.
-              </p>
-            </div>
+            </label>
 
-            <!-- Pack 4: Bulk B2B Wholesale (RED & LOCKED - 50% ADVANCE) -->
-            <div 
-              id="pack-card-bulk" 
-              class="pack-card pack-bulk p-4 rounded-2xl border-2 border-rose-400 bg-rose-50/70 text-rose-950 cursor-pointer transition-all card-hover relative" 
-              data-pack="bulk"
-              onclick="selectPack('bulk')"
-              role="button"
-              tabindex="0"
-            >
-              <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-rose-700 text-white px-2.5 py-0.5 rounded-full shadow-sm flex items-center gap-1">
-                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-                <span>Purely Pre-Order</span>
-              </span>
-              <div class="font-serif font-bold text-lg text-rose-950 flex items-center gap-1.5">
-                <span>Bulk Wholesale (5kg+)</span>
+            <!-- Pack 4: Bulk B2B Wholesale (RED & LOCKED) -->
+            <label class="relative block cursor-pointer select-none">
+              <input 
+                type="radio" 
+                name="pack_type" 
+                value="bulk" 
+                class="peer sr-only"
+                id="pack-choice-bulk"
+              />
+              <div class="p-4 rounded-2xl border-2 border-rose-400 bg-rose-50/70 text-rose-950 transition-all card-hover peer-checked:border-rose-700 peer-checked:bg-rose-100/90 peer-checked:ring-2 peer-checked:ring-rose-700/30 peer-focus-visible:ring-4 peer-focus-visible:ring-rose-600">
+                <span class="absolute top-3 right-3 text-[10px] font-bold uppercase tracking-wider bg-rose-700 text-white px-2.5 py-0.5 rounded-full shadow-sm flex items-center gap-1">
+                  🔒 Purely Pre-Order
+                </span>
+                <div class="font-serif font-bold text-lg text-rose-950">Bulk Wholesale (5kg+)</div>
+                <div class="flex items-baseline gap-1.5 my-1 text-rose-800 font-extrabold text-base">
+                  <span>50% Advance Required</span>
+                </div>
+                <div class="mt-2 p-2 rounded-xl bg-rose-100/80 border border-rose-300 text-[11px] text-rose-900 font-medium leading-snug">
+                  ⚠️ <strong>Notice:</strong> 50% advance payment required to schedule commercial bed harvesting.
+                </div>
               </div>
-              <div class="flex items-baseline gap-1.5 my-1 text-rose-800 font-extrabold text-base">
-                <span>🔒 50% Advance Required</span>
-              </div>
-              <div class="mt-2 p-2 rounded-xl bg-rose-100/70 border border-rose-300 text-[11px] text-rose-900 font-medium leading-snug">
-                ⚠️ <strong>Purely Pre-Order Only:</strong> 50% advance payment required to schedule commercial bed harvesting.
-              </div>
-            </div>
+            </label>
 
           </div>
 
-          <!-- Quantity Stepper -->
+          <!-- Quantity Stepper (Clean Buttons & No Scroll Spinners) -->
           <div class="pt-4 border-t border-cream-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <span class="font-serif font-bold text-forest-900 text-base">2. Choose Quantity</span>
+              <h3 class="font-serif font-bold text-forest-900 text-base">2. Choose Quantity</h3>
               <p class="text-xs text-slate-500">How many packs would you like?</p>
             </div>
 
@@ -923,7 +874,6 @@
               <button 
                 type="button" 
                 id="order-qty-minus" 
-                onclick="changeQuantity(-1)" 
                 class="w-10 h-10 rounded-xl bg-white text-forest-900 font-bold hover:bg-cream-200 active:scale-95 transition-all shadow-sm flex items-center justify-center text-xl cursor-pointer select-none" 
                 aria-label="Decrease quantity"
               >
@@ -933,7 +883,6 @@
               <button 
                 type="button" 
                 id="order-qty-plus" 
-                onclick="changeQuantity(1)" 
                 class="w-10 h-10 rounded-xl bg-white text-forest-900 font-bold hover:bg-cream-200 active:scale-95 transition-all shadow-sm flex items-center justify-center text-xl cursor-pointer select-none" 
                 aria-label="Increase quantity"
               >
@@ -950,188 +899,52 @@
             <input 
               type="text" 
               id="order-customer-address" 
-              placeholder="e.g. Dekargaon Tezpur, or delivery tomorrow 9 AM" 
+              placeholder="e.g. Dekargaon Tezpur, or delivery tomorrow morning" 
               class="w-full text-xs px-4 py-3 rounded-xl border border-cream-300 bg-cream-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-800 transition-all"
             />
           </div>
 
           <!-- Live Order Summary Box with Calculated Total -->
-          <div class="p-4 rounded-2xl bg-forest-50 border border-forest-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
+          <div class="p-4 rounded-2xl bg-forest-50 border border-forest-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs">
             <div>
               <span class="text-slate-500 block text-[11px]">Selected Order:</span>
-              <div id="order-summary-pack" class="font-serif text-sm font-bold text-forest-900">2 × 200g Fresh Retail Punnet</div>
+              <div id="order-summary-pack" class="font-serif text-sm font-bold text-forest-900">1 × 200g Punnet</div>
             </div>
             <div id="order-summary-total" class="text-right">
-              Total: <strong class="text-forest-900 font-extrabold text-lg">₹118</strong> <span class="text-xs text-slate-500">(2 × ₹59)</span>
+              Total: <strong class="text-forest-900 font-extrabold text-lg">₹59</strong> <span class="text-xs text-slate-500">(1 × ₹59)</span>
             </div>
           </div>
 
           <!-- Direct Order Buttons -->
           <div class="flex flex-col sm:flex-row gap-3 pt-2">
-            <!-- WhatsApp Dispatch -->
+            <!-- Dynamic WhatsApp Order CTA -->
             <a 
               id="wa-order-btn" 
-              href="https://api.whatsapp.com/send?phone=919126431273" 
+              href="https://api.whatsapp.com/send?phone=919126431273&text=Hi%20Kathfula!%20I%20would%20like%20to%20order%201%20x%20200g%20Punnet%20(Total:%20%E2%82%B959).%20Please%20confirm%20delivery." 
               target="_blank" 
-              onclick="openWhatsAppOrder(event)"
               class="flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs tracking-wide shadow-md transition-all cursor-pointer"
             >
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-              </svg>
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
               <span>Send Order via WhatsApp</span>
             </a>
 
-            <!-- Mail Dispatch -->
+            <!-- Call Direct Button -->
             <a 
-              id="mail-order-btn" 
-              href="mailto:smjjlborah@gmail.com" 
+              href="tel:+919126431273" 
               class="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-forest-800 hover:bg-forest-700 text-white font-semibold text-xs tracking-wide transition-all shadow-sm"
             >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              <span>Order via Email</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              <span>Call Farm Direct</span>
             </a>
           </div>
 
-          <!-- Direct Inlined Order Logic for Zero-Latency & Zero-Cache Guarantee -->
-          <script>
-            (function() {
-              window.PACK_SIZES = {
-                "200g": { name: "200g Fresh Retail Punnet", unitPrice: 59, priceDisplay: "₹59", isLocked: false },
-                "500g": { name: "500g Fresh Pack", unitPrice: 149, priceDisplay: "₹149", isLocked: false },
-                "1kg": { name: "1kg Culinary Crate", unitPrice: 299, priceDisplay: "₹299", isLocked: false },
-                "bulk": { name: "Bulk Wholesale (5kg+)", unitPrice: 0, priceDisplay: "Wholesale Quote", isLocked: true }
-              };
-              window.selectedPackKey = "200g";
-              window.orderQuantity = 1;
-
-              window.selectPack = function(packKey) {
-                if (!window.PACK_SIZES[packKey]) return;
-                window.selectedPackKey = packKey;
-
-                var allKeys = ["200g", "500g", "1kg", "bulk"];
-                for (var i = 0; i < allKeys.length; i++) {
-                  var k = allKeys[i];
-                  var card = document.getElementById("pack-card-" + k);
-                  if (!card) continue;
-                  var isSelected = (k === packKey);
-                  var isBulk = (k === "bulk");
-
-                  if (isSelected) {
-                    card.setAttribute("aria-selected", "true");
-                    card.classList.add("selected");
-                    if (isBulk) {
-                      card.style.borderColor = "#BE123C";
-                      card.style.backgroundColor = "#FFF1F2";
-                      card.style.boxShadow = "0 0 0 3px rgba(190, 18, 60, 0.35)";
-                    } else {
-                      card.style.borderColor = "#1E3F2D";
-                      card.style.backgroundColor = "#EDF5F0";
-                      card.style.boxShadow = "0 0 0 3px rgba(30, 63, 45, 0.25)";
-                    }
-                  } else {
-                    card.setAttribute("aria-selected", "false");
-                    card.classList.remove("selected");
-                    if (isBulk) {
-                      card.style.borderColor = "#FB7185";
-                      card.style.backgroundColor = "rgba(255, 241, 242, 0.7)";
-                      card.style.boxShadow = "none";
-                    } else {
-                      card.style.borderColor = "#E2D9CC";
-                      card.style.backgroundColor = "#FFFFFF";
-                      card.style.boxShadow = "none";
-                    }
-                  }
-                }
-
-                window.updateOrderDisplay();
-              };
-
-              window.changeQuantity = function(delta) {
-                var current = parseInt(window.orderQuantity, 10) || 1;
-                window.orderQuantity = Math.max(1, Math.min(50, current + delta));
-                var display = document.getElementById("order-qty-display");
-                if (display) display.textContent = String(window.orderQuantity);
-                window.updateOrderDisplay();
-              };
-
-              window.updateOrderDisplay = function() {
-                var pack = window.PACK_SIZES[window.selectedPackKey] || window.PACK_SIZES["200g"];
-                var qty = window.orderQuantity || 1;
-                
-                var display = document.getElementById("order-qty-display");
-                if (display) display.textContent = String(qty);
-
-                var summary = document.getElementById("order-summary-pack");
-                if (summary) summary.textContent = qty + " × " + pack.name;
-
-                var totalElem = document.getElementById("order-summary-total");
-                if (totalElem) {
-                  if (pack.isLocked) {
-                    totalElem.innerHTML = '<span style="color:#BE123C;font-weight:800;">50% Advance Required • Wholesale Pricing</span>';
-                  } else {
-                    var total = qty * pack.unitPrice;
-                    totalElem.innerHTML = 'Total: <strong style="color:#1E3F2D;font-weight:900;font-size:1.15rem;">₹' + total + '</strong> <span style="font-size:0.75rem;color:#64748B;font-weight:normal;">(' + qty + ' × ' + pack.priceDisplay + ')</span>';
-                  }
-                }
-
-                var noteInput = document.getElementById("order-customer-address");
-                var note = noteInput ? noteInput.value.trim() : "";
-
-                var waBtn = document.getElementById("wa-order-btn");
-                if (waBtn) {
-                  var msg = "";
-                  if (pack.isLocked) {
-                    msg = "Hello KATHFULA Team! I would like to place a B2B Bulk Wholesale Pre-Order:\n\n• Order Item: " + pack.name + "\n• Quantity: " + qty + " order unit(s) (5kg+ min)\n• Terms: Purely Pre-Order with 50% Advance Payment required.";
-                    if (note) msg += "\n• Delivery / Notes: " + note;
-                    msg += "\n\nPlease provide quotation and 50% advance details. Thank you!";
-                    waBtn.style.backgroundColor = "#BE123C";
-                    waBtn.innerHTML = '<svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg><span>Pre-Order Bulk on WhatsApp (50% Advance)</span>';
-                  } else {
-                    var totalAmount = qty * pack.unitPrice;
-                    msg = "Hello KATHFULA Team! I would like to order Fresh Oyster Mushrooms:\n\n• Pack Size: " + pack.name + " (@ " + pack.priceDisplay + "/pack)\n• Quantity: " + qty + " pack(s)\n• Total Amount: ₹" + totalAmount;
-                    if (note) msg += "\n• Delivery / Address: " + note;
-                    msg += "\n\nPlease confirm harvest availability and delivery. Thank you!";
-                    waBtn.style.backgroundColor = "#059669";
-                    waBtn.innerHTML = '<svg style="width:16px;height:16px;fill:currentColor;" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg><span>Send Order via WhatsApp</span>';
-                  }
-                  waBtn.href = "https://api.whatsapp.com/send?phone=919126431273&text=" + encodeURIComponent(msg);
-                }
-
-                var mailBtn = document.getElementById("mail-order-btn");
-                if (mailBtn) {
-                  var sub = pack.isLocked ? "Bulk Pre-Order Request (" + qty + "x 5kg+ Wholesale)" : "Order Request: " + qty + "x " + pack.name;
-                  var body = pack.isLocked ? "Hello KATHFULA Team,\n\nI want to place a Bulk Wholesale Pre-Order:\n- Quantity: " + qty + " units\n- Note: 50% advance payment acknowledged.\n- Delivery: " + (note || "None") : "Hello KATHFULA Team,\n\nI want to order:\n- " + qty + "x " + pack.name + "\n- Total: ₹" + (qty * pack.unitPrice) + "\n- Delivery: " + (note || "None");
-                  mailBtn.href = "mailto:smjjlborah@gmail.com?subject=" + encodeURIComponent(sub) + "&body=" + encodeURIComponent(body);
-                }
-              };
-
-              window.openWhatsAppOrder = function(e) {
-                if (e && e.preventDefault) e.preventDefault();
-                var waBtn = document.getElementById("wa-order-btn");
-                if (waBtn && waBtn.href) {
-                  window.open(waBtn.href, "_blank");
-                }
-              };
-
-              // Attach note listener
-              var noteElem = document.getElementById("order-customer-address");
-              if (noteElem) {
-                noteElem.addEventListener("input", window.updateOrderDisplay);
-              }
-
-              // Initial execution
-              window.selectPack("200g");
-            })();
-          </script>
-
         </div>
 
-        <!-- Right Column: Direct Contact Info & Quick Message Form -->
-        <div class="lg:col-span-5 space-y-6 reveal-on-scroll">
+        <!-- Right Column: Direct Contact Info & Netlify Inquiry Form -->
+        <div class="lg:col-span-5 space-y-6">
           
           <!-- Contact Cards -->
-          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-cream-300 shadow-sm space-y-5">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 border border-cream-300 shadow-sm space-y-4">
             <h3 class="font-serif text-xl font-bold text-forest-900">Direct Contact Channels</h3>
 
             <div class="space-y-3">
@@ -1153,11 +966,11 @@
                 </div>
                 <div>
                   <span class="text-[11px] font-bold text-amber-800 uppercase tracking-wider block">Official Email</span>
-                  <span class="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-forest-900 break-all">smjjlborah@gmail.com</span>
+                  <span class="text-sm font-bold text-slate-900 group-hover:text-forest-900">smjjlborah@gmail.com</span>
                 </div>
               </a>
 
-              <!-- Farm Location -->
+              <!-- Address -->
               <div class="flex items-start gap-3.5 p-3.5 rounded-2xl bg-cream-50 border border-cream-200">
                 <div class="w-10 h-10 rounded-xl bg-teal-700 text-white flex items-center justify-center shrink-0 mt-0.5">
                   <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
@@ -1171,7 +984,7 @@
               </div>
 
               <!-- FSSAI License Card -->
-              <div class="p-3.5 rounded-2xl bg-emerald-50/80 border border-emerald-300 flex items-center justify-between text-xs">
+              <div class="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-300 flex items-center justify-between text-xs">
                 <div>
                   <span class="text-[10px] font-bold text-emerald-800 uppercase tracking-wider">FSSAI Certified</span>
                   <div class="font-mono font-bold text-forest-900 text-xs mt-0.5">Lic. No. 203261130000845</div>
@@ -1182,41 +995,60 @@
 
           </div>
 
-          <!-- Quick Message Box -->
+          <!-- Netlify Quick Inquiry Form -->
           <div class="bg-white rounded-3xl p-6 border border-cream-300 shadow-sm space-y-4">
-            <h4 class="font-serif text-lg font-bold text-forest-900">Quick Inquiry Form</h4>
-            <form id="kathfula-contact-form" class="space-y-3 text-xs">
+            <h3 class="font-serif text-lg font-bold text-forest-900">Send an Inquiry</h3>
+            <form 
+              id="kathfula-contact-form" 
+              name="kathfula-inquiry" 
+              method="POST" 
+              data-netlify="true" 
+              action="/#order-contact"
+              class="space-y-3 text-xs"
+            >
+              <!-- Netlify Form Hidden Identifier -->
+              <input type="hidden" name="form-name" value="kathfula-inquiry" />
+
               <div>
+                <label for="contact-name" class="block font-semibold text-slate-700 mb-1">Your Name *</label>
                 <input 
                   type="text" 
                   id="contact-name" 
+                  name="name" 
                   required 
-                  placeholder="Your Full Name *" 
+                  placeholder="e.g. Priyam Hazarika" 
                   class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-cream-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-800"
                 />
               </div>
+
               <div>
+                <label for="contact-phone" class="block font-semibold text-slate-700 mb-1">Phone / WhatsApp Number *</label>
                 <input 
                   type="tel" 
                   id="contact-phone" 
+                  name="phone" 
                   required 
-                  placeholder="Your Phone / WhatsApp Number *" 
+                  placeholder="+91 9876543210" 
                   class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-cream-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-800"
                 />
               </div>
+
               <div>
+                <label for="contact-message" class="block font-semibold text-slate-700 mb-1">Message or Order Inquiry</label>
                 <textarea 
                   id="contact-message" 
+                  name="message" 
                   rows="2" 
-                  placeholder="Inquiry message, quantity needed, or questions..." 
+                  placeholder="Quantity desired, questions, or delivery notes..." 
                   class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-cream-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-forest-800"
                 ></textarea>
               </div>
+
               <button 
                 type="submit" 
-                class="w-full py-3 rounded-xl bg-forest-800 hover:bg-forest-700 text-white font-bold tracking-wide transition-all shadow-sm"
+                class="w-full py-3 rounded-xl bg-forest-800 hover:bg-forest-700 text-white font-bold tracking-wide transition-all shadow-sm cursor-pointer"
               >
-                Submit & Connect on WhatsApp
+                Submit Farm Inquiry
               </button>
             </form>
           </div>
@@ -1230,47 +1062,41 @@
 
 
   <!-- ========================================================================= -->
-  <!-- 7. FOOTER                                                                 -->
+  <!-- 6. FOOTER                                                                 -->
   <!-- ========================================================================= -->
-  <footer class="mt-auto bg-white border-t border-cream-300/80 py-12 text-slate-500 text-xs">
+  <footer class="mt-auto bg-white border-t border-cream-300 py-12 text-slate-500 text-xs">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
       
-      <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-6 border-b border-cream-200">
-        <!-- Logo & Note -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-xl bg-forest-800 flex items-center justify-center text-cream-100">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12c0 2.85 1.2 5.42 3.12 7.24.4.38.93.59 1.48.59h1.9c.83 0 1.5-.67 1.5-1.5V13.5c0-.83.67-1.5 1.5-1.5h1c.83 0 1.5.67 1.5 1.5v4.83c0 .83.67 1.5 1.5 1.5h1.9c.55 0 1.08-.21 1.48-.59C20.8 17.42 22 14.85 22 12c0-5.52-4.48-10-10-10zm-1 12h-1v-2h1v2zm3 0h-1v-2h1v2z"/>
-            </svg>
+          <div class="w-8 h-8 rounded-xl bg-forest-800 text-white flex items-center justify-center font-serif font-bold text-sm">
+            K
           </div>
           <div>
-            <div class="flex items-center gap-2">
-              <span class="font-serif font-bold text-forest-900 text-sm">KATHFULA FRESH OYSTER MUSHROOMS</span>
-              <span class="text-[10px] text-emerald-800 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">FSSAI 203261130000845</span>
-            </div>
-            <p class="text-[11px] text-slate-500">Udmari Borjhargaon, PO: Dekargaon, Tezpur, Assam - 784501 • Tel: +91 9126431273</p>
+            <span class="font-serif font-bold text-forest-900 text-base">KATHFULA</span>
+            <span class="text-[11px] text-slate-500 block">Rooted in Nature, Nourishing Tomorrow</span>
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div class="flex items-center gap-6 text-slate-600 font-medium text-xs flex-wrap">
+        <div class="flex flex-wrap items-center justify-center gap-6 font-medium text-slate-600">
           <a href="#overview" class="hover:text-forest-800 transition-colors">Overview</a>
-          <a href="#quick-facts" class="hover:text-forest-800 transition-colors">Nutrition</a>
+          <a href="#nutrition-table" class="hover:text-forest-800 transition-colors">Nutrition</a>
           <a href="#health-benefits" class="hover:text-forest-800 transition-colors">Benefits</a>
           <a href="#preparation" class="hover:text-forest-800 transition-colors">Prep & Storage</a>
           <a href="#order-contact" class="hover:text-forest-800 text-forest-800 font-bold transition-colors">Order & Pricing</a>
-          <a href="qr_packaging_hub.html" class="hover:text-forest-800 text-forest-700 font-semibold transition-colors">Packet QR & Labels</a>
+          <a href="qr_packaging_hub.html" class="hover:text-forest-800 text-emerald-800 font-semibold transition-colors">Packet QR & Labels</a>
         </div>
       </div>
 
-      <!-- USDA Nutritional Disclaimer & Copyright -->
-      <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-slate-500 leading-relaxed text-center md:text-left">
-        <p class="max-w-3xl">
-          <strong class="font-semibold text-slate-700">Disclaimer:</strong> Nutritional values are based on standard reference data from the United States Department of Agriculture (USDA FoodData Central, FDC ID: 168580 / Pleurotus ostreatus). Actual values may vary slightly based on cultivation substrates, harvesting maturity, and culinary cooking methods.
-        </p>
-        <p class="shrink-0 font-medium text-slate-600">
-          &copy; 2026 KATHFULA. All rights reserved.
-        </p>
+      <div class="pt-6 border-t border-cream-200 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-slate-500">
+        <div>
+          © 2026 KATHFULA. All rights reserved. Udmari Borjhargaon, PO: Dekargaon, Tezpur, Assam – 784501.
+        </div>
+        <div class="flex items-center gap-4">
+          <span>FSSAI Lic. <strong class="text-slate-700 font-mono">203261130000845</strong></span>
+          <span>•</span>
+          <a href="tel:+919126431273" class="hover:text-forest-900 text-slate-700 font-semibold">+91 9126431273</a>
+        </div>
       </div>
 
     </div>
@@ -1278,55 +1104,193 @@
 
 
   <!-- ========================================================================= -->
-  <!-- FLOATING WHATSAPP CHAT BUTTON (Bottom Left)                               -->
+  <!-- FLOATING WHATSAPP BUTTON (DESKTOP ONLY: hidden md:flex)                   -->
   <!-- ========================================================================= -->
   <a 
-    href="https://api.whatsapp.com/send?phone=919126431273&text=Hi%20Kathfula%20Team!%20I%20would%20like%20to%20order%20Fresh%20Oyster%20Mushrooms." 
+    href="https://api.whatsapp.com/send?phone=919126431273&text=Hi%20Kathfula!%20I%20would%20like%20to%20order%20Fresh%20Oyster%20Mushrooms." 
     target="_blank" 
-    class="fixed bottom-6 left-6 z-40 wa-float-btn bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 rounded-full flex items-center gap-2.5 shadow-xl transition-all group cursor-pointer"
-    aria-label="Chat on WhatsApp with Kathfula"
+    class="hidden md:flex fixed bottom-6 left-6 z-40 wa-float-btn bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 rounded-full items-center gap-2.5 shadow-xl transition-all group cursor-pointer"
+    aria-label="Order on WhatsApp with Kathfula"
   >
-    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-      <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-    </svg>
-    <span class="text-xs font-bold pr-1 hidden sm:inline-block">Order on WhatsApp</span>
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    <span class="text-xs font-bold pr-1">Order on WhatsApp</span>
   </a>
 
 
   <!-- ========================================================================= -->
-  <!-- STICKY MOBILE CONVERSION BAR (Bottom on Mobile)                           -->
+  <!-- MOBILE STICKY ACTION BAR (MOBILE ONLY: md:hidden)                         -->
   <!-- ========================================================================= -->
-  <div id="mobile-action-bar" class="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-cream-300 p-2.5 flex items-center gap-2 md:hidden shadow-lg transition-transform duration-300 translate-y-full">
-    <a href="tel:+919126431273" class="flex-1 inline-flex items-center justify-center gap-1.5 py-3 rounded-xl bg-forest-800 text-white font-bold text-xs shadow-sm">
+  <div class="fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-cream-300 p-2.5 flex items-center gap-2 md:hidden shadow-lg">
+    <a 
+      href="tel:+919126431273" 
+      class="flex-1 inline-flex items-center justify-center gap-1.5 py-3 rounded-xl bg-forest-800 hover:bg-forest-700 text-white font-bold text-xs shadow-sm transition-colors"
+    >
       <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-      <span>Call 9126431273</span>
+      <span>Call Farm</span>
     </a>
-    <a href="https://api.whatsapp.com/send?phone=919126431273&text=Hi%20Kathfula!%20I%20would%20like%20to%20order%20Fresh%20Oyster%20Mushrooms." target="_blank" class="flex-1 inline-flex items-center justify-center gap-1.5 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-sm">
+    <a 
+      id="mobile-wa-order-btn" 
+      href="https://api.whatsapp.com/send?phone=919126431273&text=Hi%20Kathfula!%20I%20would%20like%20to%20order%20Fresh%20Oyster%20Mushrooms." 
+      target="_blank" 
+      class="flex-1 inline-flex items-center justify-center gap-1.5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs shadow-sm transition-colors"
+    >
       <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-      <span>Order on WhatsApp</span>
+      <span>WhatsApp</span>
     </a>
   </div>
 
 
   <!-- ========================================================================= -->
-  <!-- FLOATING TOAST NOTIFICATION                                               -->
+  <!-- PRODUCTION JAVASCRIPT LOGIC (Completely Self-Contained)                   -->
   <!-- ========================================================================= -->
-  <div id="toast-notification" class="fixed top-24 right-4 sm:right-8 z-50 transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 max-w-sm">
-    <div class="bg-forest-900 text-cream-50 px-5 py-4 rounded-2xl shadow-2xl border border-forest-700 flex items-center gap-3">
-      <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 shrink-0"></span>
-      <p id="toast-message" class="text-xs font-medium leading-snug">Inquiry dispatched successfully!</p>
-    </div>
-  </div>
+  <script>
+    (function() {
+      // 1. Pack Sizes & Pricing Configuration
+      const PACK_DATA = {
+        "200g": { name: "200g Punnet", plural: "200g Punnets", unitPrice: 59, priceDisplay: "₹59", isLocked: false },
+        "500g": { name: "500g Fresh Pack", plural: "500g Fresh Packs", unitPrice: 149, priceDisplay: "₹149", isLocked: false },
+        "1kg": { name: "1kg Crate", plural: "1kg Crates", unitPrice: 299, priceDisplay: "₹299", isLocked: false },
+        "bulk": { name: "Bulk Wholesale (5kg+)", plural: "Bulk Wholesale (5kg+) Crates", unitPrice: 0, priceDisplay: "Wholesale Quote", isLocked: true }
+      };
 
+      let selectedPackKey = "200g";
+      let quantity = 1;
 
-  <!-- Back to Top Floating Button -->
-  <button id="back-to-top" class="fixed bottom-6 right-6 w-11 h-11 rounded-2xl bg-forest-800 text-cream-100 shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-forest-700 hover:scale-105 z-40" aria-label="Back to top">
-    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 15l7-7 7 7"/>
-    </svg>
-  </button>
+      // 2. DOM Selectors
+      const radioInputs = document.querySelectorAll('input[name="pack_type"]');
+      const qtyDisplay = document.getElementById("order-qty-display");
+      const btnPlus = document.getElementById("order-qty-plus");
+      const btnMinus = document.getElementById("order-qty-minus");
+      const orderSummaryPack = document.getElementById("order-summary-pack");
+      const orderSummaryTotal = document.getElementById("order-summary-total");
+      const waOrderBtn = document.getElementById("wa-order-btn");
+      const mobileWaOrderBtn = document.getElementById("mobile-wa-order-btn");
+      const addressInput = document.getElementById("order-customer-address");
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
 
-  <!-- Application Logic -->
-  <script src="app.js?v=2.3"></script>
+      // 3. Calculator & WhatsApp Link Generator
+      function recalculateOrder() {
+        const pack = PACK_DATA[selectedPackKey] || PACK_DATA["200g"];
+        const packLabel = quantity > 1 ? pack.plural : pack.name;
+        const note = addressInput ? addressInput.value.trim() : "";
+
+        // Update quantity display
+        if (qtyDisplay) {
+          qtyDisplay.textContent = String(quantity);
+        }
+
+        // Update summary text
+        if (orderSummaryPack) {
+          orderSummaryPack.textContent = `${quantity} × ${pack.name}`;
+        }
+
+        // Update summary total & buttons
+        let waMessage = "";
+
+        if (pack.isLocked) {
+          if (orderSummaryTotal) {
+            orderSummaryTotal.innerHTML = `<span class="text-rose-700 font-bold">50% Advance Required • Wholesale Pricing</span>`;
+          }
+          if (waOrderBtn) {
+            waOrderBtn.className = "flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-rose-700 hover:bg-rose-800 text-white font-bold text-xs tracking-wide shadow-md transition-all cursor-pointer";
+            waOrderBtn.innerHTML = `
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"/></svg>
+              <span>Pre-Order Bulk on WhatsApp (50% Advance)</span>
+            `;
+          }
+
+          waMessage = `Hi Kathfula! I would like to place a Bulk Wholesale Pre-Order for 5kg+ Commercial Crates (Quantity: ${quantity} crate(s)). I acknowledge the 50% advance payment requirement. Please provide invoice and harvest schedule.`;
+          if (note) {
+            waMessage += ` Delivery note: ${note}`;
+          }
+        } else {
+          const total = quantity * pack.unitPrice;
+          if (orderSummaryTotal) {
+            orderSummaryTotal.innerHTML = `Total: <strong class="text-forest-900 font-extrabold text-lg">₹${total}</strong> <span class="text-xs text-slate-500 font-normal">(${quantity} × ${pack.priceDisplay})</span>`;
+          }
+          if (waOrderBtn) {
+            waOrderBtn.className = "flex-1 inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs tracking-wide shadow-md transition-all cursor-pointer";
+            waOrderBtn.innerHTML = `
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Send Order via WhatsApp</span>
+            `;
+          }
+
+          waMessage = `Hi Kathfula! I would like to order ${quantity} x ${packLabel} (Total: ₹${total}). Please confirm delivery.`;
+          if (note) {
+            waMessage += ` Delivery note: ${note}`;
+          }
+        }
+
+        const encodedWaUrl = `https://api.whatsapp.com/send?phone=919126431273&text=${encodeURIComponent(waMessage)}`;
+
+        if (waOrderBtn) {
+          waOrderBtn.href = encodedWaUrl;
+        }
+        if (mobileWaOrderBtn) {
+          mobileWaOrderBtn.href = encodedWaUrl;
+        }
+      }
+
+      // 4. Radio Change Listeners
+      radioInputs.forEach(radio => {
+        radio.addEventListener("change", (e) => {
+          if (e.target.checked) {
+            selectedPackKey = e.target.value;
+            recalculateOrder();
+          }
+        });
+      });
+
+      // 5. Quantity Stepper (+ / -)
+      if (btnPlus) {
+        btnPlus.addEventListener("click", () => {
+          quantity = Math.min(50, quantity + 1);
+          recalculateOrder();
+        });
+      }
+
+      if (btnMinus) {
+        btnMinus.addEventListener("click", () => {
+          quantity = Math.max(1, quantity - 1);
+          recalculateOrder();
+        });
+      }
+
+      // 6. Notes input listener
+      if (addressInput) {
+        addressInput.addEventListener("input", recalculateOrder);
+      }
+
+      // 7. Mobile Menu Toggle
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+        mobileNavLinks.forEach(link => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+      }
+
+      // 8. Header Shadow on Scroll
+      const header = document.getElementById("main-header");
+      window.addEventListener("scroll", () => {
+        if (header) {
+          if (window.scrollY > 20) {
+            header.classList.add("shadow-md");
+          } else {
+            header.classList.remove("shadow-md");
+          }
+        }
+      });
+
+      // Initial Calculation Run
+      recalculateOrder();
+    })();
+  </script>
 </body>
 </html>
